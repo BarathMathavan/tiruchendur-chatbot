@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # --- Configuration (loaded from environment) ---
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+GOOGLE_SHEET_PARKING_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_INFO_NAME", "Tiruchendur_Parking_Lots_Info")
 GOOGLE_SHEET_LOCAL_INFO_NAME = os.getenv("GOOGLE_SHEET_LOCAL_INFO_NAME", "Tiruchendur_Local_Info")
 GOOGLE_SHEET_PARKING_LOTS_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_LOTS_INFO", "Tiruchendur_Parking_Lots_Info")
 GOOGLE_SHEET_PARKING_STATUS_LIVE_NAME = os.getenv("GOOGLE_SHEET_PARKING_STATUS_LIVE", "Tiruchendur_Parking_Status_Live")
@@ -342,23 +343,38 @@ class BotLogic:
         return cache or []
 
     def fetch_local_info_from_sheet(self, worksheet_name: str, force_refresh: bool = False):
+        """
+        Fetches data from a specific WORKSHEET (tab) within the single LOCAL_INFO spreadsheet.
+        """
         last_fetch_attr = f"LAST_LOCAL_INFO_FETCH_TIME_{worksheet_name}"
         if not hasattr(self, last_fetch_attr): setattr(self, last_fetch_attr, 0)
+        
+        # The spreadsheet name is now always the same master file.
+        # The worksheet_name parameter tells us which tab to open.
         self.LOCAL_INFO_CACHE[worksheet_name] = self.fetch_sheet_data(
             self.LOCAL_INFO_CACHE.get(worksheet_name), last_fetch_attr, self.LOCAL_INFO_CACHE_DURATION, 
             GOOGLE_SHEET_LOCAL_INFO_NAME, worksheet_name, force_refresh=force_refresh
         )
 
     def fetch_parking_lots_info(self, force_refresh: bool = False):
+        """
+        Fetches data from the single PARKING_INFO spreadsheet.
+        """
         self.PARKING_LOTS_INFO_CACHE = self.fetch_sheet_data(
             self.PARKING_LOTS_INFO_CACHE, "LAST_PARKING_LOTS_INFO_FETCH_TIME", self.STATIC_DATA_CACHE_DURATION,
-            GOOGLE_SHEET_PARKING_LOTS_INFO_NAME, "Sheet1", force_refresh=force_refresh
+            GOOGLE_SHEET_PARKING_INFO_NAME, "Sheet1", force_refresh=force_refresh # Always open the parking master file
         )
 
     def fetch_parking_live_status(self, force_refresh: bool = False):
+        """
+        Fetches live status from the single PARKING_INFO spreadsheet.
+        NOTE: You might need to change "Sheet1" to the correct tab name for live status.
+        """
+        # This function also now points to the single PARKING master file.
+        # We assume the live status is in a worksheet named "Sheet1". Update if needed.
         records = self.fetch_sheet_data(
             list(self.PARKING_LIVE_STATUS_CACHE.values()), "LAST_PARKING_LIVE_STATUS_FETCH_TIME", self.LIVE_DATA_CACHE_DURATION,
-            GOOGLE_SHEET_PARKING_STATUS_LIVE_NAME, "Sheet1", force_refresh=force_refresh
+            GOOGLE_SHEET_PARKING_INFO_NAME, "Sheet1", force_refresh=force_refresh
         )
         self.PARKING_LIVE_STATUS_CACHE = {str(r['ParkingLotID']): r for r in records if 'ParkingLotID' in r}
 
