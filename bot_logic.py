@@ -12,19 +12,23 @@ from math import radians, sin, cos, sqrt, atan2
 from collections import defaultdict
 from urllib.parse import quote_plus
 
+# --- Imports for the final fix ---
+import base64
+import json
+import binascii
+
 load_dotenv()
 
-# --- NEW: Define the base directory of the script ---
+# --- Define the base directory of the script ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # --- Configuration (loaded from environment) ---
+# NOTE: This uses the simplified two-sheet structure
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
-GOOGLE_SHEET_PARKING_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_INFO_NAME", "Tiruchendur_Parking_Lots_Info")
 GOOGLE_SHEET_LOCAL_INFO_NAME = os.getenv("GOOGLE_SHEET_LOCAL_INFO_NAME", "Tiruchendur_Local_Info")
-GOOGLE_SHEET_PARKING_LOTS_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_LOTS_INFO", "Tiruchendur_Parking_Lots_Info")
-GOOGLE_SHEET_PARKING_STATUS_LIVE_NAME = os.getenv("GOOGLE_SHEET_PARKING_STATUS_LIVE", "Tiruchendur_Parking_Status_Live")
+GOOGLE_SHEET_PARKING_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_INFO_NAME", "Tiruchendur_Parking_Lots_Info")
 
-# --- MODIFIED: Use the BASE_DIR to create an absolute path ---
+# --- Use the BASE_DIR to create an absolute path for credentials ---
 credentials_filename = os.getenv("GOOGLE_SHEETS_CREDENTIALS_FILE", "credentials.json")
 GOOGLE_SHEETS_CREDENTIALS_FILE = os.path.join(BASE_DIR, credentials_filename)
 
@@ -36,10 +40,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # --- All Constants and Menu Texts ---
-### --- MODIFIED SECTION: Added Feedback Link Constant --- ###
 GOOGLE_FORM_FEEDBACK_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSempmuc0_3KkCX3JK3wCZTod51Zw3o8ZkG78kQpcMTmVTGsPg/viewform?usp=header"
 
-### --- MODIFIED SECTION: Reordered Menu and Added Feedback Text --- ###
 MENU_TEXTS = {
     "en": {
         "welcome_tiruchendur": "Vanakkam {user_name}! I'm your Tiruchendur Assistant. 😊",
@@ -62,7 +64,7 @@ MENU_TEXTS = {
         "feedback_response": "Thank you for helping us improve! 🙏\nPlease share your valuable feedback using the link below:\n\n<a href=\"{feedback_link}\" target=\"_blank\">Open Feedback Form</a>",
         "invalid_menu_option": "Invalid option. Please type a number from the menu or 'X' to end.",
         "temple_info_menu_prompt": "Murugan Temple Information - Type the number:",
-        "temple_timings_menu_item": "1. Nada Open/Close & Pooja Times",
+        "temple_timings_menu_item": "1. Temple Open/Close & Pooja Times",
         "temple_dress_code_menu_item": "2. Dress Code",
         "temple_seva_tickets_menu_item": "3. Seva & Ticket Details",
         "option_go_back_text": "0. Go Back to Main Menu",
@@ -134,8 +136,15 @@ MENU_TEXTS = {
         "place_details_maps": "\n{name}\nமுகவரி: {address}\n🗺️ {maps_url}"
     }
 }
+
+# The constants now refer to the WORKSHEET (TAB) NAMES inside the 'Tiruchendur_Local_Info' spreadsheet
 SUPPORTED_LANGUAGES = { "en": {"name": "English"}, "ta": {"name": "தமிழ் (Tamil)"} }
-SHEET_HELP_CENTRES, SHEET_FIRST_AID, SHEET_TEMP_BUS_STANDS, SHEET_TOILETS, SHEET_DESIGNATED_PARKING_STATIC, SHEET_ANNADHANAM = "Help_Centres", "First_Aid_Stations", "Temp_Bus_Stands", "Toilets_Near_Temple", "Designated_Public_Parking", "Annadhanam_Details"
+SHEET_HELP_CENTRES = "Help_Centres" # Make sure this tab name is correct in your sheet
+SHEET_FIRST_AID = "First_Aid_Stations" # Make sure this tab name is correct in your sheet
+SHEET_TEMP_BUS_STANDS = "Temp_Bus_Stands" # Make sure this tab name is correct in your sheet
+SHEET_TOILETS = "Toilets_Near_Temple" # Make sure this tab name is correct in your sheet
+SHEET_DESIGNATED_PARKING_STATIC = "Designated_Public_Parking" # Make sure this tab name is correct in your sheet
+SHEET_ANNADHANAM = "Annadhanam_Details" # Make sure this tab name is correct in your sheet
 
 OVERALL_ROUTE_MY_MAPS = {
     "thoothukudi": "1RTKvzXANpeJXI5wsW28WGclXkO2T7kw",
@@ -158,17 +167,71 @@ class BotLogic:
     def _preload_data(self):
         if not GOOGLE_MAPS_API_KEY:
             logger.warning("CRITICAL: GOOGLE_MAPS_API_KEY not found. Map features will fail.")
-        if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
-            logger.warning(f"'{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found. Google Sheets features will be disabled.")
-            return
-            
+
         logger.info("Pre-loading all data from Google Sheets at startup...")
-        all_sheets_to_fetch = [SHEET_HELP_CENTRES, SHEET_FIRST_AID, SHEET_TEMP_BUS_STANDS, SHEET_TOILETS, SHEET_DESIGNATED_PARKING_STATIC, SHEET_ANNADHANAM]
+        all_sheets_to_fetch = [
+            SHEET_HELP_CENTRES, SHEET_FIRST_AID, SHEET_TEMP_BUS_STANDS,
+            SHEET_TOILETS, SHEET_DESIGNATED_PARKING_STATIC, SHEET_ANNADHANAM
+        ]
         for sheet in all_sheets_to_fetch:
             self.fetch_local_info_from_sheet(sheet, force_refresh=True)
         self.fetch_parking_lots_info(force_refresh=True)
         self.fetch_parking_live_status(force_refresh=True)
         logger.info("Pre-loading complete.")
+
+    def get_gspread_client(self):
+        """
+        Authorizes with Google Sheets using a Base64 encoded environment
+        variable for maximum reliability on Vercel.
+        """
+        scopes = [
+            'https://www.googleapis.com/auth/spreadsheets.readonly',
+            'https://www.googleapis.com/auth/drive.readonly'
+        ]
+        
+        base64_creds = os.getenv('GOOGLE_CREDENTIALS_BASE64')
+
+        # Path 1: We are on Vercel (the Base64 variable exists)
+        if base64_creds:
+            logger.info("Found GOOGLE_CREDENTIALS_BASE64. Decoding and processing...")
+            creds_dict = None
+            try:
+                decoded_json_str = base64.b64decode(base64_creds).decode('utf-8')
+                creds_dict = json.loads(decoded_json_str)
+            except (binascii.Error, TypeError) as e:
+                logger.error(f"ERROR: Failed to decode Base64 string. The value in Vercel is likely corrupted or not valid Base64. Error: {e}")
+                return None
+            except json.JSONDecodeError as e:
+                logger.error(f"ERROR: Decoded string is not valid JSON. Check the original credentials.json file format. Error: {e}")
+                return None
+
+            if creds_dict:
+                try:
+                    creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
+                    client = gspread.authorize(creds)
+                    logger.info("SUCCESS: gspread client authorized successfully from Base64 credentials.")
+                    return client
+                except Exception as e:
+                    logger.error(f"ERROR: Authorization with Google failed. This usually means the sheets are not shared with the service account email. Error: {e}", exc_info=True)
+                    return None
+            else:
+                logger.error("ERROR: Credentials dictionary was not created, cannot proceed with authorization.")
+                return None
+
+        # Path 2: We are running locally (no Base64 variable found)
+        else:
+            logger.warning("GOOGLE_CREDENTIALS_BASE64 not found. Falling back to local credentials.json file.")
+            try:
+                if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
+                    logger.error(f"FATAL: Local credentials file '{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found.")
+                    return None
+                creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDENTIALS_FILE, scopes=scopes)
+                client = gspread.authorize(creds)
+                logger.info("SUCCESS: gspread client authorized successfully from local file.")
+                return client
+            except Exception as e:
+                logger.error(f"ERROR: Failed to authorize using local file. Error: {e}", exc_info=True)
+                return None
 
     def _get_response_structure(self, text="", photos=None, buttons=None):
         return {"text": text, "photos": photos or [], "buttons": buttons or []}
@@ -177,9 +240,9 @@ class BotLogic:
         if input_type == 'start_command' or user_id not in self.user_states:
             self.user_states[user_id] = {"lang": "en", "menu_level": "language_select"}
             return self._change_language(user_id, is_initial=True, user_name=user_name)
-        
+
         state = self.user_states[user_id]
-        
+
         if state.get("menu_level") == "language_select":
             lang_choice = str(data).strip().lower()
             if lang_choice in SUPPORTED_LANGUAGES:
@@ -192,7 +255,8 @@ class BotLogic:
         text_input = str(data).strip()
         if text_input.lower() == 'x':
             lang = state.get("lang", "en")
-            del self.user_states[user_id]
+            if user_id in self.user_states:
+                del self.user_states[user_id]
             return self._get_response_structure(self.get_text(lang, "goodbye_message"))
 
         handler = getattr(self, f"_handle_{state.get('menu_level', 'main_menu')}", self._handle_invalid_state)
@@ -202,13 +266,7 @@ class BotLogic:
         self.user_states[user_id]["menu_level"] = "main_menu"
         return self._get_response_structure(f"{self.get_text(user_id, 'invalid_menu_option')}\n\n{self._get_menu_text('main_menu', user_id)}")
 
-    ### --- MODIFIED SECTION: Updated menu actions and numbering --- ###
     def _handle_main_menu(self, user_id, choice):
-        # Handle language change which is now option 10
-        if choice == "10":
-            return self._change_language(user_id)
-            
-        # New menu mapping
         menu_actions = {
             "1": ("parking_awaiting_route", None),
             "2": ("temple_info_menu", None),
@@ -219,36 +277,40 @@ class BotLogic:
             "7": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_ANNADHANAM)),
             "8": (None, lambda: self.get_text(user_id, "emergency_contacts_info")),
             "9": ("nearby_search", None),
+            "10": (None, lambda: self._change_language(user_id)),
             "11": (None, lambda: self.get_text(user_id, "feedback_response", feedback_link=GOOGLE_FORM_FEEDBACK_LINK)),
         }
         new_level, action = menu_actions.get(choice, (None, None))
 
         if new_level:
             self.user_states[user_id]["menu_level"] = new_level
-            
+            prompt_map = {
+                "parking_awaiting_route": "parking_route_prompt",
+                "temple_info_menu": "temple_info_menu_prompt",
+                "nearby_search": "freestyle_query_prompt"
+            }
             if new_level == "temple_info_menu":
                 response_text = self._get_menu_text(new_level, user_id)
             else:
-                prompt_map = {
-                    "parking_awaiting_route": "parking_route_prompt", 
-                    "nearby_search": "freestyle_query_prompt"
-                }
                 response_text = self.get_text(user_id, prompt_map[new_level])
-            
+
             return self._get_response_structure(response_text)
-        
+
         elif action:
+            if choice == "10":
+                return action()
+            
             result = action()
             return self._get_response_structure(f"{result}\n\n{self._get_menu_text('main_menu', user_id)}")
-        
+
         return self._handle_invalid_state(user_id, choice)
 
     def _handle_temple_info_menu(self, user_id, choice):
-        if choice == "0": 
+        if choice == "0":
             self.user_states[user_id]["menu_level"] = "main_menu"
             return self._get_response_structure(self._get_menu_text("main_menu", user_id))
-        
-        text_key = {"1": "temple_timings_details", "2": "temple_dress_code_details"}.get(choice, "invalid_menu_option")
+
+        text_key = {"1": "temple_timings_details", "2": "temple_dress_code_details", "3": "temple_seva_tickets_menu_item"}.get(choice, "invalid_menu_option")
         text = self.get_text(user_id, text_key)
         return self._get_response_structure(f"{text}\n\n{self._get_menu_text('temple_info_menu', user_id)}")
 
@@ -278,51 +340,28 @@ class BotLogic:
         lang = lang_code if lang_code in SUPPORTED_LANGUAGES else self.user_states.get(lang_code, {}).get("lang", "en")
         template_string = MENU_TEXTS.get(lang, MENU_TEXTS["en"]).get(key, f"<{key}_MISSING>")
         if kwargs:
-            try: return template_string.format(**kwargs)
+            try:
+                return template_string.format(**kwargs)
             except KeyError as e:
                 logger.error(f"Formatting failed for key '{key}'. Missing placeholder: {e}")
                 return f"Error: Data for '{e}' is missing."
         return template_string
 
-    ### --- MODIFIED SECTION: Updated menu key list --- ###
     def _get_menu_text(self, menu_type, user_id):
         keys = {
             "main_menu": [
-                "main_menu_prompt", 
-                "option_parking_availability",
-                "option_temple_info", 
-                "option_help_centres", 
-                "option_first_aid", 
-                "option_temp_bus_stands", 
-                "option_toilets_temple", 
-                "option_annadhanam",
-                "option_emergency_contacts", 
-                "option_nearby_facilities", 
-                "option_change_language", 
-                "option_feedback",
+                "main_menu_prompt", "option_parking_availability", "option_temple_info",
+                "option_help_centres", "option_first_aid", "option_temp_bus_stands",
+                "option_toilets_temple", "option_annadhanam", "option_emergency_contacts",
+                "option_nearby_facilities", "option_change_language", "option_feedback",
                 "option_end_conversation_text"
-            ], 
+            ],
             "temple_info_menu": [
-                "temple_info_menu_prompt", 
-                "temple_timings_menu_item", 
-                "temple_dress_code_menu_item", 
-                "option_go_back_text"
+                "temple_info_menu_prompt", "temple_timings_menu_item", "temple_dress_code_menu_item",
+                "temple_seva_tickets_menu_item", "option_go_back_text"
             ]
         }.get(menu_type, [])
         return "\n".join([self.get_text(user_id, k) for k in keys])
-
-    def get_gspread_client(self):
-        try:
-            scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly', 'https://www.googleapis.com/auth/drive.readonly']
-            creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDENTIALS_FILE, scopes=scopes)
-            client = gspread.authorize(creds)
-            logger.info("gspread client authorized successfully.")
-            return client
-        except FileNotFoundError:
-            logger.error(f"Credentials file '{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found.")
-        except Exception as e:
-            logger.error(f"Gspread auth error: {e}", exc_info=True)
-        return None
 
     def fetch_sheet_data(self, cache, last_fetch_time_attr, cache_duration, sheet_name, worksheet_name, force_refresh=False):
         last_fetch_time = getattr(self, last_fetch_time_attr, 0)
@@ -330,7 +369,7 @@ class BotLogic:
             return cache
         logger.info(f"Fetching fresh data for {sheet_name}/{worksheet_name}. Reason: {'Forced refresh' if force_refresh else 'Cache expired'}.")
         client = self.get_gspread_client()
-        if not client: 
+        if not client:
             logger.error("Gspread client is not available. Cannot fetch data.")
             return cache or []
         try:
@@ -340,7 +379,7 @@ class BotLogic:
             return records
         except Exception as e:
             logger.error(f"Error fetching from {sheet_name}/{worksheet_name}: {e}", exc_info=True)
-        return cache or []
+            return cache or []
 
     def fetch_local_info_from_sheet(self, worksheet_name: str, force_refresh: bool = False):
         """
@@ -348,11 +387,9 @@ class BotLogic:
         """
         last_fetch_attr = f"LAST_LOCAL_INFO_FETCH_TIME_{worksheet_name}"
         if not hasattr(self, last_fetch_attr): setattr(self, last_fetch_attr, 0)
-        
-        # The spreadsheet name is now always the same master file.
-        # The worksheet_name parameter tells us which tab to open.
+
         self.LOCAL_INFO_CACHE[worksheet_name] = self.fetch_sheet_data(
-            self.LOCAL_INFO_CACHE.get(worksheet_name), last_fetch_attr, self.LOCAL_INFO_CACHE_DURATION, 
+            self.LOCAL_INFO_CACHE.get(worksheet_name), last_fetch_attr, self.LOCAL_INFO_CACHE_DURATION,
             GOOGLE_SHEET_LOCAL_INFO_NAME, worksheet_name, force_refresh=force_refresh
         )
 
@@ -362,7 +399,7 @@ class BotLogic:
         """
         self.PARKING_LOTS_INFO_CACHE = self.fetch_sheet_data(
             self.PARKING_LOTS_INFO_CACHE, "LAST_PARKING_LOTS_INFO_FETCH_TIME", self.STATIC_DATA_CACHE_DURATION,
-            GOOGLE_SHEET_PARKING_INFO_NAME, "Sheet1", force_refresh=force_refresh # Always open the parking master file
+            GOOGLE_SHEET_PARKING_INFO_NAME, "Sheet1", force_refresh=force_refresh
         )
 
     def fetch_parking_live_status(self, force_refresh: bool = False):
@@ -370,13 +407,12 @@ class BotLogic:
         Fetches live status from the single PARKING_INFO spreadsheet.
         NOTE: You might need to change "Sheet1" to the correct tab name for live status.
         """
-        # This function also now points to the single PARKING master file.
-        # We assume the live status is in a worksheet named "Sheet1". Update if needed.
         records = self.fetch_sheet_data(
             list(self.PARKING_LIVE_STATUS_CACHE.values()), "LAST_PARKING_LIVE_STATUS_FETCH_TIME", self.LIVE_DATA_CACHE_DURATION,
             GOOGLE_SHEET_PARKING_INFO_NAME, "Sheet1", force_refresh=force_refresh
         )
         self.PARKING_LIVE_STATUS_CACHE = {str(r['ParkingLotID']): r for r in records if 'ParkingLotID' in r}
+
 
     def _generate_embed_link(self, query: str = "", mode: str = "place", origin: str = "", destination: str = "", my_map_id: str = "") -> str:
         if my_map_id:
@@ -393,8 +429,7 @@ class BotLogic:
         self.fetch_local_info_from_sheet(worksheet_name, force_refresh=True)
         data_items = self.LOCAL_INFO_CACHE.get(worksheet_name, [])
         lang = self.user_states[user_id].get("lang", "en")
-        
-        # Note: 'option_designated_parking' key is no longer in use in the menu, but the functionality remains here.
+
         format_map = {
             SHEET_HELP_CENTRES: ("option_help_centres", "local_info_item_format", "View Map"),
             SHEET_FIRST_AID: ("option_first_aid", "local_info_item_format", "View Map"),
@@ -405,21 +440,20 @@ class BotLogic:
         }
         category_key, item_format_key, link_text = format_map.get(worksheet_name, ("", "", ""))
         if not category_key: return "Error: Unknown data category."
-        
-        # Get the category name, handling the special case for the unused parking option
+
         if worksheet_name == SHEET_DESIGNATED_PARKING_STATIC:
-             category_name = category_key # Use the hardcoded string
+             category_name = category_key
         else:
              category_name = self.get_text(user_id, category_key).split('. ', 1)[-1]
 
         if not data_items:
             logger.warning(f"No data for {worksheet_name}. Check sheet content/permissions.")
             return self.get_text(user_id, "no_local_info_found", category_name=category_name)
-        
+
         title = self.get_text(user_id, "local_info_title_format", category_name=category_name)
         reply_parts = [title]
         item_template = self.get_text(user_id, item_format_key)
-        
+
         for item in data_items:
             format_kwargs = defaultdict(lambda: 'N/A', item)
             item_name = item.get(f'Name_{lang}', item.get('Name_en', 'N/A'))
@@ -434,7 +468,7 @@ class BotLogic:
             format_kwargs["MapsLink"] = link_html
             reply_parts.append(item_template.format_map(format_kwargs))
         return "".join(reply_parts)
-        
+
     def haversine(self, lat1, lon1, lat2, lon2):
         R = 6371; dLat, dLon = radians(lat2 - lat1), radians(lon2 - lon1)
         a = sin(dLat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dLon / 2)**2
@@ -443,11 +477,13 @@ class BotLogic:
     def find_available_parking(self, user_id: str, route_preference: Optional[str] = None) -> str:
         self.fetch_parking_lots_info(force_refresh=True)
         self.fetch_parking_live_status(force_refresh=True)
-        
+
         current_lang = self.user_states[user_id].get("lang", "en")
+        user_lat, user_lon = self.TIRUCHENDUR_COORDS
+
         applicable_lots = [
-            lot for lot in self.PARKING_LOTS_INFO_CACHE 
-            if (not route_preference or route_preference == "any" or 
+            lot for lot in self.PARKING_LOTS_INFO_CACHE
+            if (not route_preference or route_preference == "any" or
                 route_preference.lower() in str(lot.get("Route_en", "any")).lower())
         ]
 
@@ -457,57 +493,61 @@ class BotLogic:
 
         processed_lots = []
         for lot in applicable_lots:
+            is_active_str = str(lot.get('IsParkingAvailable', 'FALSE')).upper()
+            if is_active_str not in ['TRUE', '1']:
+                logger.info(f"Skipping manually disabled parking lot: {lot.get('Parking_name_en')}")
+                continue
+
             try:
                 lat = float(lot.get('Latitude'))
                 lon = float(lot.get('Longitude'))
                 capacity = int(lot.get('TotalCapacity', 0))
-            except (ValueError, TypeError):
+            except (ValueError, TypeError, AttributeError):
                 logger.warning(f"Skipping lot due to invalid Lat/Lon/Capacity: {lot.get('Parking_name_en')}")
                 continue
             if capacity <= 0: continue
 
             status = self.PARKING_LIVE_STATUS_CACHE.get(str(lot.get('ParkingLotID')), {})
-            available = int(status.get('CurrentAvailability', -1))
-            if available == -1: 
+            available = int(status.get('Total_Space', -1))
+            if available == -1:
                 available = capacity - max(0, int(status.get('CurrentIn', 0)) - int(status.get('CurrentOut', 0)))
-            
+
             percentage_full = ((capacity - available) / capacity * 100) if capacity > 0 else 100
 
             if available > 0 and percentage_full < self.PARKING_FULL_THRESHOLD_PERCENT:
                 lot_data = lot.copy()
                 lot_data.update({
                     "Availability": available, "PercentageFull": percentage_full,
-                    "Distance": self.haversine(self.TIRUCHENDUR_COORDS[0], self.TIRUCHENDUR_COORDS[1], lat, lon),
+                    "Distance": self.haversine(user_lat, user_lon, lat, lon),
                     "Latitude": lat, "Longitude": lon, "TotalCapacity": capacity
                 })
                 processed_lots.append(lot_data)
 
-        if not processed_lots: 
-            logger.info(f"All lots for route {route_preference} are full or unavailable.")
+        if not processed_lots:
+            logger.info(f"All active lots for route {route_preference} are full or unavailable based on threshold.")
             return self.get_text(user_id, "no_parking_available")
 
-        sorted_lots = sorted(processed_lots, key=lambda x: (int(x.get('Priority', 99)), x['Distance']))
-        
+        sorted_lots = sorted(processed_lots, key=lambda x: (x['PercentageFull'], int(x.get('Priority', 99)), x['Distance']))
+
         title = self.get_text(user_id, "parking_for_route_title" if route_preference and route_preference != "any" else "parking_info_title", RouteName=route_preference.capitalize())
-        
+
         details_list = []
-        for lot in sorted_lots[:3]:
-            # Use the special placeholder for the origin
-            embed_url = self._generate_embed_link(mode="directions", origin="CURRENT_LOCATION", destination=f"{lot['Latitude']},{lot['Longitude']}")
+        for lot in sorted_lots:
+            embed_url = self._generate_embed_link(mode="directions", origin=f"{user_lat},{user_lon}", destination=f"{lot['Latitude']},{lot['Longitude']}")
             maps_link = f'<a href="{embed_url}" data-embed="true">Get Directions</a>' if embed_url else "Directions unavailable"
-            
-            details_list.append(self.get_text(user_id, "parking_lot_details_format", 
-                ParkingName=lot.get(f"Parking_name_{current_lang}", lot.get("Parking_name_en")), 
-                Distance=lot['Distance'], Availability=lot['Availability'], 
+
+            details_list.append(self.get_text(user_id, "parking_lot_details_format",
+                ParkingName=lot.get(f"Parking_name_{current_lang}", lot.get("Parking_name_en")),
+                Distance=lot['Distance'], Availability=lot['Availability'],
                 TotalCapacity=lot['TotalCapacity'], PercentageFull=lot['PercentageFull'],
                 MapsLink=maps_link))
-        
+
         final_response = f"{title}\n" + "\n".join(details_list)
 
         if route_preference and route_preference in OVERALL_ROUTE_MY_MAPS:
             my_map_id = OVERALL_ROUTE_MY_MAPS[route_preference]
             overall_map_embed_url = self._generate_embed_link(my_map_id=my_map_id)
-            
+
             final_response += self.get_text(user_id, "overall_parking_map_link_text",
                 overall_map_url=overall_map_embed_url,
                 RouteName=route_preference.capitalize()
@@ -519,6 +559,6 @@ class BotLogic:
         place_type_display_name = search_query.replace('_', ' ').title()
         embed_url = self._generate_embed_link(f"{search_query} in Tiruchendur", mode="search")
         maps_url_html = f'<a href="{embed_url}" data-embed="true">View on Map</a>' if embed_url else "Map not available"
-        
+
         return (f'{self.get_text(user_id, "nearest_place_intro", place_type_display_name=place_type_display_name)}'
                 f'{self.get_text(user_id, "place_details_maps", name=f"Results for {place_type_display_name}", address="Click the link below to see locations on the map.", maps_url=maps_url_html)}')
