@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import os
-import json
 import logging
 import time
+import json # <-- Added for handling JSON from environment variables
 from typing import List, Dict, Any, Optional
 from dotenv import load_dotenv
 import gspread
@@ -15,18 +15,12 @@ from urllib.parse import quote_plus
 
 load_dotenv()
 
-# --- Define the base directory of the script ---
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 # --- Configuration (loaded from environment) ---
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 GOOGLE_SHEET_LOCAL_INFO_NAME = os.getenv("GOOGLE_SHEET_LOCAL_INFO_NAME", "Tiruchendur_Local_Info")
 GOOGLE_SHEET_PARKING_LOTS_INFO_NAME = os.getenv("GOOGLE_SHEET_PARKING_LOTS_INFO", "Tiruchendur_Parking_Lots_Info")
 GOOGLE_SHEET_PARKING_STATUS_LIVE_NAME = os.getenv("GOOGLE_SHEET_PARKING_STATUS_LIVE", "Tiruchendur_Parking_Status_Live")
-
-# --- Use the BASE_DIR to create an absolute path for credentials ---
-credentials_filename = os.getenv("GOOGLE_SHEETS_CREDENTIALS_FILE", "credentials.json")
-GOOGLE_SHEETS_CREDENTIALS_FILE = os.path.join(BASE_DIR, credentials_filename)
+GOOGLE_SHEETS_CREDENTIALS_FILE = os.getenv("GOOGLE_SHEETS_CREDENTIALS_FILE", "credentials.json")
 
 # Centralized logging
 logging.basicConfig(
@@ -36,8 +30,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # --- All Constants and Menu Texts ---
-GOOGLE_FORM_FEEDBACK_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSempmuc0_3KkCX3JK3wCZTod51Zw3o8ZkG78kQpcMTmVTGsPg/viewform?usp=header"
-
 MENU_TEXTS = {
     "en": {
         "welcome_tiruchendur": "Vanakkam {user_name}! I'm your Tiruchendur Assistant. 😊",
@@ -45,22 +37,21 @@ MENU_TEXTS = {
         "invalid_language_selection": "Invalid selection. Please click one of the buttons.",
         "language_selected": "You have selected {language_name}.",
         "main_menu_prompt": "Tiruchendur Main Menu - Type the number for your choice:",
-        "option_parking_availability": "1. 🅿️ Live Parking Availability",
-        "option_temple_info": "2. Murugan Temple Info",
-        "option_help_centres": "3. 'May I Help You?' Centres",
-        "option_first_aid": "4. First Aid Stations",
-        "option_temp_bus_stands": "5. Temporary Bus Stands",
-        "option_toilets_temple": "6. Toilets Near Temple",
+        "option_temple_info": "1. Murugan Temple Info",
+        "option_help_centres": "2. 'May I Help You?' Centres",
+        "option_first_aid": "3. First Aid Stations",
+        "option_temp_bus_stands": "4. Temporary Bus Stands",
+        "option_toilets_temple": "5. Toilets Near Temple",
+        "option_designated_parking": "6. Designated Public Parking",
         "option_annadhanam": "7. Annadhanam Details",
-        "option_emergency_contacts": "8. Emergency Helpline Numbers",
-        "option_nearby_facilities": "9. Search Nearby (ATM, Hotel etc.)",
-        "option_change_language": "10. Change Language",
-        "option_feedback": "11. Feedback",
+        "option_parking_availability": "8. 🅿️ Live Parking Availability",
+        "option_emergency_contacts": "9. Emergency Helpline Numbers",
+        "option_nearby_facilities": "10. Search Nearby (ATM, Hotel etc.)",
+        "option_change_language": "11. Change Language",
         "option_end_conversation_text": "\nType 'X' to End Conversation.",
-        "feedback_response": "Thank you for helping us improve! 🙏\nPlease share your valuable feedback using the link below:\n\n<a href=\"{feedback_link}\" target=\"_blank\">Open Feedback Form</a>",
         "invalid_menu_option": "Invalid option. Please type a number from the menu or 'X' to end.",
         "temple_info_menu_prompt": "Murugan Temple Information - Type the number:",
-        "temple_timings_menu_item": "1. Temple Open/Close & Pooja Times",
+        "temple_timings_menu_item": "1. Nada Open/Close & Pooja Times",
         "temple_dress_code_menu_item": "2. Dress Code",
         "temple_seva_tickets_menu_item": "3. Seva & Ticket Details",
         "option_go_back_text": "0. Go Back to Main Menu",
@@ -77,7 +68,7 @@ MENU_TEXTS = {
         "parking_for_route_title": "--- Parking Options for {RouteName} Route ---",
         "parking_info_title": "--- Tiruchendur Parking Availability ---",
         "no_parking_available": "Sorry, no suitable parking spots are currently available or all are nearly full.",
-        "parking_lot_details_format": "\n🅿️ {ParkingName}\n🗺️ Directions: {MapsLink}\n📍 Approx. {Distance:.1f} km away\n📦 Availability: {Availability}/{TotalCapacity} slots ({PercentageFull:.0f}% full)",
+        "parking_lot_details_format": "\n🅿️ {ParkingName}\n📍 Approx. {Distance:.1f} km away\n📦 Availability: {Availability}/{TotalCapacity} slots ({PercentageFull:.0f}% full)\n🗺️ Directions: {MapsLink}",
         "overall_parking_map_link_text": "\n\n<a href=\"{overall_map_url}\" data-embed=\"true\">🗺️ View All Parking Lots for the {RouteName} Route</a>",
         "temple_timings_details": "Tiruchendur Murugan Temple General Timings:\nTimings can vary on festival days. It's best to check locally.",
         "temple_dress_code_details": "Dress Code: Traditional Indian attire is recommended. Men: Dhoti/Pants. Women: Saree/Salwar Kameez.",
@@ -91,19 +82,18 @@ MENU_TEXTS = {
         "invalid_language_selection": "தவறான தேர்வு. பொத்தான்களில் ஒன்றைக் கிளிக் செய்யவும்.",
         "language_selected": "நீங்கள் {language_name} மொழியைத் தேர்ந்தெடுத்துள்ளீர்கள்.",
         "main_menu_prompt": "திருச்செந்தூர் முதன்மை பட்டியல் - உங்கள் தேர்விற்கு எண்ணை உள்ளிடவும்:",
-        "option_parking_availability": "1. 🅿️ நேரடி வாகன நிறுத்தம்",
-        "option_temple_info": "2. முருகன் கோவில் தகவல்கள்",
-        "option_help_centres": "3. 'உங்களுக்கு உதவலாமா?' மையங்கள்",
-        "option_first_aid": "4. முதலுதவி நிலையங்கள்",
-        "option_temp_bus_stands": "5. தற்காலிக பேருந்து நிலையங்கள்",
-        "option_toilets_temple": "6. கோவிலுக்கு அருகிலுள்ள கழிப்பறைகள்",
+        "option_temple_info": "1. முருகன் கோவில் தகவல்கள்",
+        "option_help_centres": "2. 'உங்களுக்கு உதவலாமா?' மையங்கள்",
+        "option_first_aid": "3. முதலுதவி நிலையங்கள்",
+        "option_temp_bus_stands": "4. தற்காலிக பேருந்து நிலையங்கள்",
+        "option_toilets_temple": "5. கோவிலுக்கு அருகிலுள்ள கழிப்பறைகள்",
+        "option_designated_parking": "6. நியமிக்கப்பட்ட பொது வாகன நிறுத்துமிடங்கள்",
         "option_annadhanam": "7. அன்னதானம் விவரங்கள்",
-        "option_emergency_contacts": "8. அவசர உதவி எண்கள்",
-        "option_nearby_facilities": "9. அருகில் தேடவும் (ஏடிஎம், ஹோட்டல் போன்றவை)",
-        "option_change_language": "10. மொழி மாற்றவும்",
-        "option_feedback": "11. பின்னூட்டம் (Feedback)",
+        "option_parking_availability": "8. 🅿️ நேரடி வாகன நிறுத்தம்",
+        "option_emergency_contacts": "9. அவசர உதவி எண்கள்",
+        "option_nearby_facilities": "10. அருகில் தேடவும் (ஏடிஎம், ஹோட்டல் போன்றவை)",
+        "option_change_language": "11. மொழி மாற்றவும்",
         "option_end_conversation_text": "\nஉரையாடலை முடிக்க 'X' என தட்டச்சு செய்யவும்.",
-        "feedback_response": "எங்கள் சேவையை மேம்படுத்த உதவியதற்கு நன்றி! 🙏\nகீழே உள்ள இணைப்பைப் பயன்படுத்தி உங்கள் மதிப்புமிக்க கருத்தைப் பகிரவும்:\n\n<a href=\"{feedback_link}\" target=\"_blank\">பின்னூட்டப் படிவத்தைத் திறக்கவும்</a>",
         "invalid_menu_option": "தவறான விருப்பம். மெனுவிலிருந்து ஒரு எண்ணை உள்ளிடவும் அல்லது 'X' என தட்டச்சு செய்யவும்.",
         "temple_info_menu_prompt": "முருகன் கோவில் தகவல்கள் - எண்ணை உள்ளிடவும்:",
         "temple_timings_menu_item": "1. நடை திறப்பு/சாத்துதல் & பூஜை நேரங்கள்",
@@ -123,7 +113,7 @@ MENU_TEXTS = {
         "parking_for_route_title": "--- {RouteName} சாலைக்கான வாகன நிறுத்துமிடங்கள் ---",
         "parking_info_title": "--- திருச்செந்தூர் வாகன நிறுத்தம் ---",
         "no_parking_available": "மன்னிக்கவும், பொருத்தமான வாகன நிறுத்துமிடங்கள் எதுவும் கிடைக்கவில்லை அல்லது அனைத்தும் gần நிரம்பியுள்ளன.",
-        "parking_lot_details_format": "\n🅿️ {ParkingName}\n🗺️ வழிகள்: {MapsLink}\n📍 சுமார் {Distance:.1f} கி.மீ. தொலைவில்\n📦 இடமிருப்பு: {Availability}/{TotalCapacity} ({PercentageFull:.0f}% நிரம்பியுள்ளது)",
+        "parking_lot_details_format": "\n🅿️ {ParkingName}\n📍 சுமார் {Distance:.1f} கி.மீ. தொலைவில்\n📦 இடமிருப்பு: {Availability}/{TotalCapacity} ({PercentageFull:.0f}% நிரம்பியுள்ளது)\n🗺️ வழிகள்: {MapsLink}",
         "overall_parking_map_link_text": "\n\n<a href=\"{overall_map_url}\" data-embed=\"true\">🗺️ {RouteName} வழிக்கான அனைத்து வாகன நிறுத்துமிடங்களையும் காண்க</a>",
         "temple_timings_details": "திருச்செந்தூர் முருகன் கோவில் பொது நேரங்கள்:\nபண்டிகை நாட்களில் நேரங்கள் மாறுபடலாம். உள்ளூரில் சரிபார்ப்பது நல்லது.",
         "temple_dress_code_details": "ஆடை கட்டுப்பாடு: பாரம்பரிய உடை பரிந்துரைக்கப்படுகிறது. ஆண்கள்: வேட்டி/பேண்ட். பெண்கள்: புடவை/சல்வார் கமீஸ்.",
@@ -150,29 +140,31 @@ class BotLogic:
         self.PARKING_LOTS_INFO_CACHE, self.LAST_PARKING_LOTS_INFO_FETCH_TIME = [], 0
         self.PARKING_LIVE_STATUS_CACHE, self.LAST_PARKING_LIVE_STATUS_FETCH_TIME = {}, 0
         self.LIVE_DATA_CACHE_DURATION, self.LOCAL_INFO_CACHE_DURATION, self.STATIC_DATA_CACHE_DURATION = 120, 600, 1800
-        self.PARKING_FULL_THRESHOLD_PERCENT = 70.0
+        self.PARKING_FULL_THRESHOLD_PERCENT = 95.0
         self._preload_data()
-    
+
     def _preload_data(self):
         if not GOOGLE_MAPS_API_KEY:
             logger.warning("CRITICAL: GOOGLE_MAPS_API_KEY not found. Map features will fail.")
-        if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
-            logger.warning(f"'{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found. Google Sheets features will be disabled.")
-            return
-            
-        logger.info("Pre-loading all data from Google Sheets at startup...")
-        all_sheets_to_fetch = [SHEET_HELP_CENTRES, SHEET_FIRST_AID, SHEET_TEMP_BUS_STANDS, SHEET_TOILETS, SHEET_DESIGNATED_PARKING_STATIC, SHEET_ANNADHANAM]
-        for sheet in all_sheets_to_fetch:
-            self.fetch_local_info_from_sheet(sheet, force_refresh=True)
-        self.fetch_parking_lots_info(force_refresh=True)
-        self.fetch_parking_live_status(force_refresh=True)
-        logger.info("Pre-loading complete.")
+        
+        # Pre-loading data now depends on successful gspread client authorization
+        if self.get_gspread_client():
+            logger.info("Pre-loading all data from Google Sheets at startup...")
+            all_sheets_to_fetch = [SHEET_HELP_CENTRES, SHEET_FIRST_AID, SHEET_TEMP_BUS_STANDS, SHEET_TOILETS, SHEET_DESIGNATED_PARKING_STATIC, SHEET_ANNADHANAM]
+            for sheet in all_sheets_to_fetch:
+                self.fetch_local_info_from_sheet(sheet, force_refresh=True)
+            self.fetch_parking_lots_info(force_refresh=True)
+            self.fetch_parking_live_status(force_refresh=True)
+            logger.info("Pre-loading complete.")
+        else:
+            logger.error("Could not authorize gspread client at startup. Data fetching will be disabled.")
+
 
     def _get_response_structure(self, text="", photos=None, buttons=None):
         return {"text": text, "photos": photos or [], "buttons": buttons or []}
 
     def process_user_input(self, user_id: str, input_type: str, data: Any, user_name: str = "User") -> Dict:
-        if input_type == 'start_command' or user_id not in self.user_states:
+        if user_id not in self.user_states:
             self.user_states[user_id] = {"lang": "en", "menu_level": "language_select"}
             return self._change_language(user_id, is_initial=True, user_name=user_name)
         
@@ -190,8 +182,7 @@ class BotLogic:
         text_input = str(data).strip()
         if text_input.lower() == 'x':
             lang = state.get("lang", "en")
-            if user_id in self.user_states:
-                del self.user_states[user_id]
+            del self.user_states[user_id]
             return self._get_response_structure(self.get_text(lang, "goodbye_message"))
 
         handler = getattr(self, f"_handle_{state.get('menu_level', 'main_menu')}", self._handle_invalid_state)
@@ -203,41 +194,20 @@ class BotLogic:
 
     def _handle_main_menu(self, user_id, choice):
         menu_actions = {
-            "1": ("parking_awaiting_route", None),
-            "2": ("temple_info_menu", None),
-            "3": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_HELP_CENTRES)),
-            "4": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_FIRST_AID)),
-            "5": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_TEMP_BUS_STANDS)),
-            "6": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_TOILETS)),
-            "7": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_ANNADHANAM)),
-            "8": (None, lambda: self.get_text(user_id, "emergency_contacts_info")),
-            "9": ("nearby_search", None),
-            "10": (None, lambda: self._change_language(user_id)),
-            "11": (None, lambda: self.get_text(user_id, "feedback_response", feedback_link=GOOGLE_FORM_FEEDBACK_LINK)),
+            "1": ("temple_info_menu", None), "2": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_HELP_CENTRES)),
+            "3": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_FIRST_AID)), "4": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_TEMP_BUS_STANDS)),
+            "5": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_TOILETS)), "6": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_DESIGNATED_PARKING_STATIC)),
+            "7": (None, lambda: self._get_formatted_sheet_data(user_id, SHEET_ANNADHANAM)), "8": ("parking_awaiting_route", None),
+            "9": (None, lambda: self.get_text(user_id, "emergency_contacts_info")), "10": ("nearby_search", None),
+            "11": (None, lambda: self._change_language(user_id))
         }
         new_level, action = menu_actions.get(choice, (None, None))
 
         if new_level:
             self.user_states[user_id]["menu_level"] = new_level
-            prompt_map = {
-                "parking_awaiting_route": "parking_route_prompt",
-                "temple_info_menu": "temple_info_menu_prompt",
-                "nearby_search": "freestyle_query_prompt"
-            }
-            if new_level == "temple_info_menu":
-                response_text = self._get_menu_text(new_level, user_id)
-            else:
-                response_text = self.get_text(user_id, prompt_map[new_level])
-            
-            return self._get_response_structure(response_text)
-        
+            prompt_map = {"temple_info_menu": "temple_info_menu_prompt", "parking_awaiting_route": "parking_route_prompt", "nearby_search": "freestyle_query_prompt"}
+            return self._get_response_structure(self.get_text(user_id, prompt_map[new_level]))
         elif action:
-            # --- THIS IS THE CORRECTED LOGIC ---
-            # Special case for "Change Language" to return the full dict with buttons
-            if choice == "10":
-                return action()
-            
-            # For all other text-based actions
             result = action()
             return self._get_response_structure(f"{result}\n\n{self._get_menu_text('main_menu', user_id)}")
         
@@ -248,7 +218,7 @@ class BotLogic:
             self.user_states[user_id]["menu_level"] = "main_menu"
             return self._get_response_structure(self._get_menu_text("main_menu", user_id))
         
-        text_key = {"1": "temple_timings_details", "2": "temple_dress_code_details", "3": "temple_seva_tickets_menu_item"}.get(choice, "invalid_menu_option")
+        text_key = {"1": "temple_timings_details", "2": "temple_dress_code_details"}.get(choice, "invalid_menu_option")
         text = self.get_text(user_id, text_key)
         return self._get_response_structure(f"{text}\n\n{self._get_menu_text('temple_info_menu', user_id)}")
 
@@ -259,12 +229,12 @@ class BotLogic:
         if "1" in choice or "tirunelveli" in choice: route_pref = "tirunelveli"
         elif "2" in choice or "thoothukudi" in choice: route_pref = "thoothukudi"
         elif "3" in choice or "nagercoil" in choice: route_pref = "nagercoil"
-        parking_reply = self.find_available_parking(user_id=user_id, route_preference=route_pref)
+        parking_reply = self.find_available_parking(self.TIRUCHENDUR_COORDS[0], self.TIRUCHENDUR_COORDS[1], user_id, route_preference=route_pref)
         return self._get_response_structure(f"{parking_reply}\n\n{self._get_menu_text('main_menu', user_id)}")
 
     def _handle_nearby_search(self, user_id, text_input):
         self.user_states[user_id]["menu_level"] = "main_menu"
-        search_reply = self.find_nearby_place(text_input, user_id=user_id)
+        search_reply = self.find_nearby_place(self.TIRUCHENDUR_COORDS[0], self.TIRUCHENDUR_COORDS[1], text_input, user_id=user_id)
         return self._get_response_structure(f"{search_reply}\n\n{self._get_menu_text('main_menu', user_id)}")
 
     def _change_language(self, user_id, is_initial=False, user_name="User"):
@@ -286,81 +256,43 @@ class BotLogic:
 
     def _get_menu_text(self, menu_type, user_id):
         keys = {
-            "main_menu": [
-                "main_menu_prompt", "option_parking_availability", "option_temple_info", 
-                "option_help_centres", "option_first_aid", "option_temp_bus_stands", 
-                "option_toilets_temple", "option_annadhanam", "option_emergency_contacts", 
-                "option_nearby_facilities", "option_change_language", "option_feedback",
-                "option_end_conversation_text"
-            ], 
-            "temple_info_menu": [
-                "temple_info_menu_prompt", "temple_timings_menu_item", "temple_dress_code_menu_item", 
-                "temple_seva_tickets_menu_item", "option_go_back_text"
-            ]
+            "main_menu": ["main_menu_prompt", "option_temple_info", "option_help_centres", "option_first_aid", "option_temp_bus_stands", "option_toilets_temple", "option_designated_parking", "option_annadhanam", "option_parking_availability", "option_emergency_contacts", "option_nearby_facilities", "option_change_language", "option_end_conversation_text"], 
+            "temple_info_menu": ["temple_info_menu_prompt", "temple_timings_menu_item", "temple_dress_code_menu_item", "option_go_back_text"]
         }.get(menu_type, [])
         return "\n".join([self.get_text(user_id, k) for k in keys])
 
-    # In bot_logic.py
-def get_gspread_client(self):
-    """
-    Authorizes with Google Sheets using an environment variable (for Vercel)
-    or a local file (for development), with enhanced debugging.
-    """
-    try:
-        scopes = [
-            'https://www.googleapis.com/auth/spreadsheets.readonly',
-            'https://www.googleapis.com/auth/drive.readonly'
-        ]
+    def get_gspread_client(self):
+        scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly', 'https://www.googleapis.com/auth/drive.readonly']
+        google_creds_json = os.getenv("GOOGLE_CREDENTIALS_JSON")
         
-        # --- START OF NEW ROBUST LOGIC ---
-        json_str_from_env = os.getenv('GOOGLE_CREDENTIALS_JSON')
-
-        # --- Enhanced Debugging ---
-        if not json_str_from_env:
-            logger.error("CRITICAL: GOOGLE_CREDENTIALS_JSON environment variable is NOT SET or is EMPTY.")
-        else:
-            # We log only a small part to confirm it's not empty, but without exposing the key.
-            logger.info(f"GOOGLE_CREDENTIALS_JSON variable was found. Starts with: {json_str_from_env[:30]}")
-
-        if json_str_from_env:
-            try:
-                # Load the entire JSON string into a dictionary
-                creds_dict = json.loads(json_str_from_env)
-                
-                # --- This is a more robust way to handle the private key ---
-                # It replaces the escaped \n with actual newlines
-                creds_dict['private_key'] = creds_dict['private_key'].replace('\\n', '\n')
-                
+        try:
+            if google_creds_json:
+                logger.info("Found GOOGLE_CREDENTIALS_JSON environment variable. Using it for authentication.")
+                creds_dict = json.loads(google_creds_json)
                 creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
-                client = gspread.authorize(creds)
-                logger.info("gspread client authorized successfully from environment variable.")
-                return client
-            except json.JSONDecodeError as e:
-                logger.error(f"Failed to parse GOOGLE_CREDENTIALS_JSON. Error: {e}. Check if the value is valid JSON.")
+            elif os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
+                logger.info(f"Using local credentials file: {GOOGLE_SHEETS_CREDENTIALS_FILE}")
+                creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDENTIALS_FILE, scopes=scopes)
+            else:
+                logger.error("FATAL: No Google credentials found. Set GOOGLE_CREDENTIALS_JSON or provide credentials.json file.")
                 return None
-            except Exception as e:
-                logger.error(f"Error creating credentials from env var: {e}", exc_info=True)
-                return None
-        
-        # --- Fallback to local file for development ---
-        else:
-            logger.info(f"Using local credentials file: {GOOGLE_SHEETS_CREDENTIALS_FILE}")
-            if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
-                logger.error(f"Credentials file '{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found.")
-                return None
-            creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDENTIALS_FILE, scopes=scopes)
-            client = gspread.authorize(creds)
-            logger.info("gspread client authorized successfully from local file.")
-            return client
             
-    except Exception as e:
-        logger.error(f"A critical unexpected error occurred in get_gspread_client: {e}", exc_info=True)
-        return None
+            client = gspread.authorize(creds)
+            logger.info("gspread client authorized successfully.")
+            return client
+
+        except json.JSONDecodeError:
+            logger.error("FATAL: Could not parse GOOGLE_CREDENTIALS_JSON. Check the variable content in Vercel.")
+            return None
+        except Exception as e:
+            logger.error(f"Gspread auth error: {e}", exc_info=True)
+            return None
 
     def fetch_sheet_data(self, cache, last_fetch_time_attr, cache_duration, sheet_name, worksheet_name, force_refresh=False):
         last_fetch_time = getattr(self, last_fetch_time_attr, 0)
         if (not force_refresh) and (time.time() - last_fetch_time < cache_duration) and cache:
             return cache
+        
         logger.info(f"Fetching fresh data for {sheet_name}/{worksheet_name}. Reason: {'Forced refresh' if force_refresh else 'Cache expired'}.")
         client = self.get_gspread_client()
         if not client: 
@@ -369,7 +301,7 @@ def get_gspread_client(self):
         try:
             records = client.open(sheet_name).worksheet(worksheet_name).get_all_records()
             setattr(self, last_fetch_time_attr, time.time())
-            logger.info(f"Successfully fetched {len(records)} records from {sheet_name}/{worksheet_name}.")
+            logger.info(f"Successfully fetched and cached {len(records)} records from {sheet_name}/{worksheet_name}.")
             return records
         except Exception as e:
             logger.error(f"Error fetching from {sheet_name}/{worksheet_name}: {e}", exc_info=True)
@@ -399,7 +331,9 @@ def get_gspread_client(self):
     def _generate_embed_link(self, query: str = "", mode: str = "place", origin: str = "", destination: str = "", my_map_id: str = "") -> str:
         if my_map_id:
             return f"https://www.google.com/maps/d/embed?mid={my_map_id}"
+        
         if not GOOGLE_MAPS_API_KEY: return ""
+        
         base_url = "https://www.google.com/maps/embed/v1/"
         if mode == "place": url = f"{base_url}place?key={GOOGLE_MAPS_API_KEY}&q={quote_plus(query)}"
         elif mode == "directions": url = f"{base_url}directions?key={GOOGLE_MAPS_API_KEY}&origin={origin}&destination={destination}"
@@ -417,19 +351,15 @@ def get_gspread_client(self):
             SHEET_FIRST_AID: ("option_first_aid", "local_info_item_format", "View Map"),
             SHEET_TEMP_BUS_STANDS: ("option_temp_bus_stands", "local_info_item_format_bus", "View Map"),
             SHEET_TOILETS: ("option_toilets_temple", "local_info_item_format", "View Map"),
-            SHEET_DESIGNATED_PARKING_STATIC: ("Designated Public Parking", "local_info_item_format_parking", "View Location"),
+            SHEET_DESIGNATED_PARKING_STATIC: ("option_designated_parking", "local_info_item_format_parking", "View Location"),
             SHEET_ANNADHANAM: ("option_annadhanam", "local_info_item_format_annadhanam", "View Map"),
         }
         category_key, item_format_key, link_text = format_map.get(worksheet_name, ("", "", ""))
         if not category_key: return "Error: Unknown data category."
         
-        if worksheet_name == SHEET_DESIGNATED_PARKING_STATIC:
-             category_name = category_key
-        else:
-             category_name = self.get_text(user_id, category_key).split('. ', 1)[-1]
-
+        category_name = self.get_text(user_id, category_key).split('. ', 1)[-1]
         if not data_items:
-            logger.warning(f"No data for {worksheet_name}. Check sheet content/permissions.")
+            logger.warning(f"No data found for {worksheet_name} after fetching. Check sheet content and permissions.")
             return self.get_text(user_id, "no_local_info_found", category_name=category_name)
         
         title = self.get_text(user_id, "local_info_title_format", category_name=category_name)
@@ -445,7 +375,7 @@ def get_gspread_client(self):
                     format_kwargs[key_en[:-3].capitalize()] = item.get(f"{key_en[:-3]}_{lang}", item.get(key_en, 'N/A'))
 
             embed_url = self._generate_embed_link(f"{item_name}, Tiruchendur")
-            link_html = f'<a href="{embed_url}" data-embed="true">{link_text}</a>' if embed_url else "Map not available"
+            link_html = f'<a href="{embed_url}" data-embed="true">{link_text}</a>'
             format_kwargs["LocationLink"] = link_html
             format_kwargs["MapsLink"] = link_html
             reply_parts.append(item_template.format_map(format_kwargs))
@@ -456,13 +386,11 @@ def get_gspread_client(self):
         a = sin(dLat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dLon / 2)**2
         return R * 2 * atan2(sqrt(a), sqrt(1 - a))
 
-    def find_available_parking(self, user_id: str, route_preference: Optional[str] = None) -> str:
+    def find_available_parking(self, user_lat: float, user_lon: float, user_id: str, route_preference: Optional[str] = None) -> str:
         self.fetch_parking_lots_info(force_refresh=True)
         self.fetch_parking_live_status(force_refresh=True)
         
         current_lang = self.user_states[user_id].get("lang", "en")
-        user_lat, user_lon = self.TIRUCHENDUR_COORDS
-        
         applicable_lots = [
             lot for lot in self.PARKING_LOTS_INFO_CACHE 
             if (not route_preference or route_preference == "any" or 
@@ -475,22 +403,17 @@ def get_gspread_client(self):
 
         processed_lots = []
         for lot in applicable_lots:
-            is_active_str = str(lot.get('IsParkingAvailable', 'FALSE')).upper()
-            if is_active_str not in ['TRUE', '1']:
-                logger.info(f"Skipping manually disabled parking lot: {lot.get('Parking_name_en')}")
-                continue
-
             try:
                 lat = float(lot.get('Latitude'))
                 lon = float(lot.get('Longitude'))
                 capacity = int(lot.get('TotalCapacity', 0))
-            except (ValueError, TypeError, AttributeError):
-                logger.warning(f"Skipping lot due to invalid Lat/Lon/Capacity: {lot.get('Parking_name_en')}")
+            except (ValueError, TypeError):
+                logger.warning(f"Skipping parking lot due to invalid/missing Lat/Lon/Capacity: {lot.get('Parking_name_en')}")
                 continue
             if capacity <= 0: continue
 
             status = self.PARKING_LIVE_STATUS_CACHE.get(str(lot.get('ParkingLotID')), {})
-            available = int(status.get('Total_Space', -1))
+            available = int(status.get('CurrentAvailability', -1))
             if available == -1: 
                 available = capacity - max(0, int(status.get('CurrentIn', 0)) - int(status.get('CurrentOut', 0)))
             
@@ -506,17 +429,16 @@ def get_gspread_client(self):
                 processed_lots.append(lot_data)
 
         if not processed_lots: 
-            logger.info(f"All active lots for route {route_preference} are full or unavailable based on threshold.")
             return self.get_text(user_id, "no_parking_available")
 
-        sorted_lots = sorted(processed_lots, key=lambda x: (x['PercentageFull'], int(x.get('Priority', 99)), x['Distance']))
+        sorted_lots = sorted(processed_lots, key=lambda x: (int(x.get('Priority', 99)), x['Distance']))
         
         title = self.get_text(user_id, "parking_for_route_title" if route_preference and route_preference != "any" else "parking_info_title", RouteName=route_preference.capitalize())
         
         details_list = []
-        for lot in sorted_lots:
+        for lot in sorted_lots[:3]:
             embed_url = self._generate_embed_link(mode="directions", origin=f"{user_lat},{user_lon}", destination=f"{lot['Latitude']},{lot['Longitude']}")
-            maps_link = f'<a href="{embed_url}" data-embed="true">Get Directions</a>' if embed_url else "Directions unavailable"
+            maps_link = f'<a href="{embed_url}" data-embed="true">Get Directions</a>'
             
             details_list.append(self.get_text(user_id, "parking_lot_details_format", 
                 ParkingName=lot.get(f"Parking_name_{current_lang}", lot.get("Parking_name_en")), 
@@ -537,10 +459,10 @@ def get_gspread_client(self):
 
         return final_response
 
-    def find_nearby_place(self, search_query: str, user_id=None) -> str:
+    def find_nearby_place(self, lat, lon, search_query, user_id=None):
         place_type_display_name = search_query.replace('_', ' ').title()
         embed_url = self._generate_embed_link(f"{search_query} in Tiruchendur", mode="search")
-        maps_url_html = f'<a href="{embed_url}" data-embed="true">View on Map</a>' if embed_url else "Map not available"
+        maps_url_html = f'<a href="{embed_url}" data-embed="true">View on Map</a>'
         
         return (f'{self.get_text(user_id, "nearest_place_intro", place_type_display_name=place_type_display_name)}'
-                f'{self.get_text(user_id, "place_details_maps", name=f"Results for {place_type_display_name}", address="Click the link below to see locations on the map.", maps_url=maps_url_html)}')  
+                f'{self.get_text(user_id, "place_details_maps", name=f"Results for {place_type_display_name}", address="Click the link below to see locations on the map.", maps_url=maps_url_html)}')
