@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import json
 import logging
 import time
 from typing import List, Dict, Any, Optional
@@ -299,17 +300,61 @@ class BotLogic:
         }.get(menu_type, [])
         return "\n".join([self.get_text(user_id, k) for k in keys])
 
-    def get_gspread_client(self):
-        try:
-            scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly', 'https://www.googleapis.com/auth/drive.readonly']
+    # In bot_logic.py
+def get_gspread_client(self):
+    """
+    Authorizes with Google Sheets using an environment variable (for Vercel)
+    or a local file (for development), with enhanced debugging.
+    """
+    try:
+        scopes = [
+            'https://www.googleapis.com/auth/spreadsheets.readonly',
+            'https://www.googleapis.com/auth/drive.readonly'
+        ]
+        
+        # --- START OF NEW ROBUST LOGIC ---
+        json_str_from_env = os.getenv('GOOGLE_CREDENTIALS_JSON')
+
+        # --- Enhanced Debugging ---
+        if not json_str_from_env:
+            logger.error("CRITICAL: GOOGLE_CREDENTIALS_JSON environment variable is NOT SET or is EMPTY.")
+        else:
+            # We log only a small part to confirm it's not empty, but without exposing the key.
+            logger.info(f"GOOGLE_CREDENTIALS_JSON variable was found. Starts with: {json_str_from_env[:30]}")
+
+        if json_str_from_env:
+            try:
+                # Load the entire JSON string into a dictionary
+                creds_dict = json.loads(json_str_from_env)
+                
+                # --- This is a more robust way to handle the private key ---
+                # It replaces the escaped \n with actual newlines
+                creds_dict['private_key'] = creds_dict['private_key'].replace('\\n', '\n')
+                
+                creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
+                client = gspread.authorize(creds)
+                logger.info("gspread client authorized successfully from environment variable.")
+                return client
+            except json.JSONDecodeError as e:
+                logger.error(f"Failed to parse GOOGLE_CREDENTIALS_JSON. Error: {e}. Check if the value is valid JSON.")
+                return None
+            except Exception as e:
+                logger.error(f"Error creating credentials from env var: {e}", exc_info=True)
+                return None
+        
+        # --- Fallback to local file for development ---
+        else:
+            logger.info(f"Using local credentials file: {GOOGLE_SHEETS_CREDENTIALS_FILE}")
+            if not os.path.exists(GOOGLE_SHEETS_CREDENTIALS_FILE):
+                logger.error(f"Credentials file '{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found.")
+                return None
             creds = Credentials.from_service_account_file(GOOGLE_SHEETS_CREDENTIALS_FILE, scopes=scopes)
             client = gspread.authorize(creds)
-            logger.info("gspread client authorized successfully.")
+            logger.info("gspread client authorized successfully from local file.")
             return client
-        except FileNotFoundError:
-            logger.error(f"Credentials file '{GOOGLE_SHEETS_CREDENTIALS_FILE}' not found.")
-        except Exception as e:
-            logger.error(f"Gspread auth error: {e}", exc_info=True)
+            
+    except Exception as e:
+        logger.error(f"A critical unexpected error occurred in get_gspread_client: {e}", exc_info=True)
         return None
 
     def fetch_sheet_data(self, cache, last_fetch_time_attr, cache_duration, sheet_name, worksheet_name, force_refresh=False):
