@@ -1,0 +1,2854 @@
+[
+  {
+    "text": "What are the special pujas offered, and how much do they cost?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Veg vegetarian restaurant near lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "What's the appropriate attire for visiting the temple?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Path to bus stand please",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Parking near temple please",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Nearest emergency room",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Cheap place to stay near beach",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near murugan temple",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "What is the dress code at tiruchendur temple?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "What can you do please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Hi",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Hotels serving non-vegetarian food",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Where is a cash machine near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Is there any parking nearby?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Nandri",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "What time does the temple open and close?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "No",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Hotels with vegetarian food options",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Path to bus stand could you tell me",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "I need a toilet could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Non-veg non-veg hotel could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Inexpensive accommodation near the train station",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "How to get to the beach near lighthouse",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Vegetarian restaurants nearby",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What are the puja timings at the murugan temple?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Sbi find an atm could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "I need a hotel near the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I need restaurants near the railway station that serve meat.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "That's wrong.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "I don't understand please",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Find an atm could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Where's the restroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Hospital closest to the main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me near lighthouse could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Info",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Restaurants nearby near lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Directions to murugan temple",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Help",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Directions to the beach, please?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Path to bus stand near valli's cave",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Parking near temple near murugan temple",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Yes",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Directions to murugan temple could you tell me",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Nope",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Emergency medical center near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Non-veg non-veg hotel",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Looking for a place to eat could you tell me",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Locate the nearest indian bank atm to valli's cave, please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I don't understand",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Inexpensive lodging",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Emergency medical center",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Hospital near the beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "I need a toilet please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "That's right",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg non-veg hotel near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "I need money from atm near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where's the nearest restroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where can i find some good non-veg chicken biryani?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "See ya",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Look for a hotel",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a hotel reservation.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "What are the temple's opening and closing times?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Indian bank i need money from atm near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Find a hotel",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "What about seva tickets?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Parking near temple near railway station",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Ok",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Where can i park could you tell me",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Looking for parking near the lighthouse.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Veg vegetarian restaurant near railway station please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Nearest hospital near murugan temple please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Budget-friendly accommodation",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "What? could you tell me",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "What?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a washroom please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where's the nearest restroom to valli's cave?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Pooja times for murugan temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Inexpensive accommodation by the beach",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Indian bank where is a cash machine near main road could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Emergency medical center near railway station could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Canara bank find an atm near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I need to find a lodge close to murugan temple.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I need a toilet near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Cheap place to stay near bus stand could you tell me",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hotels near the lighthouse.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Could you tell me the temple's dress code?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Directions to murugan temple please",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "What is the dress code for the temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Tell me about seva tickets please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Where is a cash machine near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near valli's cave",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need to go to a hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near railway station please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Where's the nearest atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from a canara bank atm near the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Indian bank find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank"
+    }
+  },
+  {
+    "text": "I need money from atm near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Restaurants nearby could you tell me",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me where the closest restroom is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Budget accommodation near murugan temple",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Restaurants nearby near railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I'd like some information on seva tickets.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Could you recommend any affordable lodging near valli's cave?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Could you help me?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Veg veg hotel near me near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "How do i get to the murugan temple by the lighthouse?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Sure",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Find a lodge near bus stand please",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Later.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Is there parking near the main road?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you tell me where the nearest sbi atm is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Icici i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Parking near temple near main road",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Alright",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Veg pure veg food options near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Do you know any vegetarian restaurants nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near beach please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "What are the seva ticket options?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Iob find an atm near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Find a lodge",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Vanakkam",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Canara bank where is a cash machine please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What are the costs for seva kattanam?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "What are the murugan temple's puja timings?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Hdfc find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Iob find an atm near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "I'm looking for a place near the beach that serves non-veg chicken biryani.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Could you tell me where the nearest restroom is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Non-veg non-veg hotel near main road please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Vegetarian restaurants near me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What are the temple timings",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Budget accommodation",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Where's a good place to park?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Veg pure veg food options near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Directions to the bus stop by the beach",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Where is the nearest indian bank atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank"
+    }
+  },
+  {
+    "text": "Cheap place to stay could you tell me",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Emergency medical center near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Where's the nearest icici atm to the railway station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Veg vegetarian restaurant",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a place near the bus stand that serves non-veg chicken biryani.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where's the nearest sbi atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Pooja times for murugan temple please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Emergency medical center near bus stand please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Looking for a washroom",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you give me directions to the bus stop near valli's cave?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Vegetarian restaurants near the lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Cheap place to stay",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Incorrect",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Hotels near the bus station.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hospital closest to me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Parking near temple",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "I need to find parking near the beach, by the temple.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "I need a toilet near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Nearest hospital near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "What's the closest hospital to murugan temple?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I need a hotel",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a washroom near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Dress restrictions for tiruchendur temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "How do i get to the murugan temple by the railway station?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hdfc where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm hungry and need somewhere to eat.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Budget accommodation please",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a place to get chicken biryani near valli's cave; it needs to be non-vegetarian.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need parking near the beach, close to the temple.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Cheap place to stay near murugan temple",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I'm looking for a place to get chicken biryani near murugan temple; i prefer non-vegetarian food.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Restaurants nearby near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "How much are seva kattanam",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Definitely",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Restaurants nearby",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Non-veg non-veg hotel near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Hotels near valli's cave that serve non-vegetarian food",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Car parking space could you tell me",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "I need a parking space.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Could you give me directions to the murugan temple?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Sbi where is a cash machine near railway station please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Iob i need money from atm near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hospital closest to the railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hotels near the bus stand with vegetarian food options.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Icici i need money from atm near murugan temple please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Could you tell me how to get to the bus stand?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Nearest hospital near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Parking near temple near beach",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Path to bus stand near beach",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "What are the murugan temple puja timings?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "How do i get to the murugan temple?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Where can i find a good chicken biryani restaurant?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Icici i need money from atm near lighthouse please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need a cheap place to stay near the main road.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Can i find an atm near the lighthouse?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a toilet",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom near valli's cave could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Nearest hospital near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I'm hungry and need a restaurant.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a vegetarian hotel near valli's cave.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Find a lodge near murugan temple",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Nearest hospital please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Later",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Canara bank i need money from atm near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Bye",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Affordable lodging",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest restroom near murugan temple please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I need some information.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Where's the nearest restroom to the bus station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Find a hotel near main road",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you recommend a vegetarian hotel near me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a hospital near the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "No way.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Directions to the bus stop near valli's cave",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Where's the nearest indian bank atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank"
+    }
+  },
+  {
+    "text": "Huh?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg restaurants serving meat near main road",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Where's a good place to get chicken biryani near the lighthouse?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Directions to the beach, please.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Where's the nearest emergency medical center?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Hdfc i need money from atm near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Where can i park near railway station could you tell me",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Path to bus stand near valli's cave could you tell me",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need a toilet near valli's cave please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Hotel serving non-vegetarian food",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Nearest hospital",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Where can i park near valli's cave",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need a doctor near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I'm hungry and need to find somewhere to eat.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm a little confused.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Find a hotel please",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Punjab national bank i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "Hospitals near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "I need a doctor",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you tell me where the closest restroom is to the lighthouse?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Where can i park near murugan temple could you tell me",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Canara bank i need money from atm near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "What to wear to the temple could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near lighthouse",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Morning!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a washroom near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Where can i park near main road",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "What are the special poojas and cost",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Could you tell me where the closest restroom is to murugan temple?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Closest hospital",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "What are the temple timings please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from an icici atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "How to get to the beach near railway station please",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Look for a lodge",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Help please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm a little confused; could you explain?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "What to wear to the temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Could you recommend a hotel near the bus station?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where can i find some good chicken biryani?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Where can i park",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Indian bank i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank"
+    }
+  },
+  {
+    "text": "Restaurants near murugan temple that serve non-vegetarian food",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Looking for a washroom near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Could you tell me the location of the nearest hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a toilet near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Emergency medical center could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a toilet near bus stand please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hotels near the beach with vegetarian food options",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Cheap place to stay near valli's cave",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Hotels near the bus station",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Namaste",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Iob i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "Inexpensive accommodation near valli's cave",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Emergency medical center near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "When does the temple open and close?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "I need a toilet near beach please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near bus stand",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Budget accommodation near valli's cave",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Find an atm near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "What can you do could you tell me",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Find an atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Thank you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I need to withdraw cash from an sbi atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Directions to the bus station",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Restaurants with non-vegetarian options",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Tell me about seva tickets",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "What's the temple's dress code?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "I need to get cash from an atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Sbi i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "I need a restaurant near murugan temple.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Hotels near the railway station with vegetarian/pure vegetarian food options.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Good morning to you",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Car parking space please",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Car parking space near main road",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Cheap place to stay near railway station",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "See you later",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Car parking space near lighthouse",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Where's the nearest canara bank atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  },
+  {
+    "text": "Do you know any inexpensive places to stay?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "See you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "How to get to the beach near railway station",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Could you tell me where the nearest atm is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Okay",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Path to bus stand near bus stand",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Restaurants near the main road that serve meat.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Certainly",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Hotels near the railway station with vegetarian food options.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Hotels near the railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Could you tell me the temple's opening hours?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near railway station",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hello",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Axis bank where is a cash machine near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Icici i need money from atm please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Hotels near me",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Inexpensive accommodation close to murugan temple",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Inexpensive accommodation",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "How to get to the beach",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Where can i park near the temple?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "How to get to the beach near valli's cave",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Find a hotel near bus stand could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where is the nearest punjab national bank atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "Where is a cash machine could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Directions to the bus stand",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Indian bank find an atm near valli's cave please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Is there an atm nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you recommend a vegetarian hotel near the lighthouse?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Is there parking near valli's cave?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Iob find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "I need a vegetarian hotel nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Where's the restroom, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Looking for a washroom near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Looking for a parking space",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Thanks",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Thank you.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I need a doctor near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Where can i find some restaurants?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me where i can park?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "What can you do",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Where's the nearest restroom to the beach?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Murugan temple timings for pooja",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Where's the nearest punjab national bank atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "Budget accommodation near main road",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "What are your capabilities?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Icici find an atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "When does the temple open and close",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Where's the nearest axis bank atm to the railway station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hello.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Where's the nearest restroom to the lighthouse?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need to find a hospital near the bus station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Sbi find an atm please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Cheap place to stay near valli's cave could you tell me",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Restaurants nearby near bus stand please",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "What is the cost of seva kattanam?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Looking for a washroom near valli's cave could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from an iob atm near the bus station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Icici find an atm near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Canara bank i need money from atm near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Looking for a washroom near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where can i find some restaurants close by?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "What is the dress code for the temple could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Veg vegetarian restaurant could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Help could you tell me",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm confused.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for inexpensive lodging near the main road.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Right.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a place to eat",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Where's the nearest atm to valli's cave?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Car parking space",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "What are the special pujas offered and how much do they cost?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Indian bank where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank"
+    }
+  },
+  {
+    "text": "When does the temple open and close please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "I need to find an hdfc atm near the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Path to bus stand",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "Not really",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Cheap place to stay near lighthouse",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "What information do you have on seva tickets?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "I need parking near the temple on the main road.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Tell me about seva tickets could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Inexpensive accommodation by the lighthouse",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from an iob atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Find an atm near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Punjab national bank find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "I need a doctor near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "What are the seva kattanam costs?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from a canara bank atm near the lighthouse.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "That's right.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Nah.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Sbi where is a cash machine near railway station could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hdfc find an atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Looking for a washroom near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need to withdraw cash from an atm by the bus stop.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a doctor near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "I need a non-vegetarian hotel near the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Huh",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Veg pure veg food options",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Correct",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Canara bank where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  }
+]

@@ -1,0 +1,8101 @@
+[
+  {
+    "text": "I need a cash machine nearby next to the bus stand could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Could you recommend a nearby hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you can i find a non-veg restaurant around here close to the market?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Just looking for a healthcare facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a cash machine close to my location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Locate a motel in this area near the riverfront please.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I'm looking for a doctor's practice near the marketplace.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Could you show me the nearest HDFC ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Any guesthouse in the vicinity.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Please is there a non-vegetarian eatery beside the shopping mall?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you help me find a public toilet would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind showing me could use a yes bank atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "Is there a restaurant nearby would you mind showing me?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Find a healthcare facility around here at the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I'm a bit lost here.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you i need to find a veg diner around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Would you be able to point me in the direction of a cosy accommodation in the vicinity?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Good afternoon there",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Locate a non-vegetarian eatery next to the lake.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Just looking for a hdfc atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Please can i find a money machine in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Can i find a restroom close by would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a healthcare center close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Public toilet would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you recommend a non-vegetarian restaurant around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Yeah.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Goodbye then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "What",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a public toilet around here could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is the nearest lodge in the vicinity?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Is there a non-vegetarian diner in the vicinity beside the school?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "I'm having some trouble and I'd appreciate some guidance.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Please is there a toilet in this area close to the lake?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Please healthcare facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Hi there",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I need a washroom could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you recommend a non-veg eatery nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm looking for a guesthouse in this area.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Wrong!",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Exactly",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Find a accommodation at the riverfront.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Locate a cash machine in this area next to the railway station would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Thanks for your help now",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Any indian overseas bank atm in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Is there a bathroom close by that I could use?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Is there a public toilet close by close to the post office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Healthcare facility in this area beside the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Any motel nearby at the school.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you i need a non-veg place to eat around here at the railway station?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I need a budget stay would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Sure!",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a restroom around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Tell me about a place to stay around here.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could use a healthcare facility nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me find a eatery next to the police station?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Tell me about a pnb money machine around here could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "PNB"
+    }
+  },
+  {
+    "text": "Find a emergency room in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "What do you mean by your capabilities?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hospital nearby, do you know where it is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "State bank of india atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "Tell me about a vegetarian hotel around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Find a non-veg restaurant beside the bus stand.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Show me a non-vegetarian restaurant please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need to find a diner close by.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest cash machine close by would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Can you point me in the direction of a restroom, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Is there a cash machine around here at the main road?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Got it, i agree.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I need a budget stay in this area would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a nearby Indian Overseas ATM facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Just looking for a atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you recommend a hospital in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a toilet in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Good evening there",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me where an ATM is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Locate a vegetarian diner in this area would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm trying to locate a bathroom in this vicinity, could you help me out?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you point me to an IDBI ATM nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Would you mind showing me is there a loo around here near the police station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "I'm looking for a washroom in this area please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Is there an IDBI bank ATM close to my location, if you don't mind?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Just looking for a veg hotel close by beside the school.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you where is the nearest healthcare facility close to the lake?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Would you mind showing me can i find a public toilet?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Alright!",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I'm trying to locate a restroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please could use a lavatory close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Bye",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Find an HDFC ATM nearby, please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Can you explain your capabilities?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a Kotak Mahindra ATM that's conveniently located close to the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Would you be able to point me towards a bathroom close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please non-veg place to eat nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I don't understand",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a toilet around here would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Show me a emergency room nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a bathroom nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for an ICICI Bank ATM in the nearby area, would you happen to know the location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Alright",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a vegetarian-friendly hotel in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Sup :)",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Thanks",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could use a motel nearby.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a public toilet nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a hdfc cash machine in the vicinity next to the railway station could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Would you mind showing me restaurant around here.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you point me in the direction of a restroom around here, near the market?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Can you tell me where the restroom is around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "What are your functions",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hotel in this vicinity.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm trying to find a nearby guesthouse, preferably one close to the law enforcement agency.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Would you mind showing me tell me about a vegetarian diner around here near the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Could you just looking for a icici bank money machine close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Could you show me some affordable accommodation options, please?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Locate a canara bank atm next to the temple could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Where is the nearest vegetarian eatery in the vicinity?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I need to find a cash point close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I'm searching for a restroom nearby please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can i find a indian overseas bank atm in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Idbi bank atm close by could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "I'm searching for a hotel.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Is there a canara bank atm please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian place to eat in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a bathroom close to my current location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is the nearest clinic?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby medical center.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you be able to show me where the nearest bathroom is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please hotel.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Show me a diner.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "What features does this bot offer?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a cash point nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I need to find a vegetarian hotel in the vicinity could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Can you show me a nearby vegetarian hotel option?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Would you mind showing me just looking for a restaurant in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me find a motel please?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a restroom next to the school?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "I need a hotel around here beside the lake.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you show me the nearest IndusInd Bank ATM around the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I need a non-veg eatery in this area near the lake.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I need a eatery in the vicinity near the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Tell me about a guesthouse in the vicinity could you?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me about a inn nearby beside the park?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Could you idbi bank atm in the vicinity next to the lake?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Would you mind showing me i'm searching for a kotak mahindra bank cash point at the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Restroom nearby beside the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I'm struggling and could really use some assistance right now.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Can you show me a doctor's office near the university?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I need a veg eatery in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Please show me a healthcare facility close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can i find a doctor's office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm searching for a washroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you point me to a nearby public toilet?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a nearby hospital close to the shopping center.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "I'm searching for a medical center close by next to the cinema hall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Could you show me some vegetarian hotel options around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Looking for a vegetarian restaurant in this neighborhood.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What do you mean?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest cash point in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Just looking for a cash machine close to the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Iob cash machine beside the cinema hall please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "I'm searching for a sbi money machine close by near the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Just looking for a place to stay could you?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Find a hdfc bank money machine nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Could you where is the nearest hospital around here beside the shopping mall?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Find a doctor's office would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you show me a non-vegetarian hotel in this area?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Locate a non-veg restaurant.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Would you mind showing me can i find a guesthouse nearby?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "No, i don't think so.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Do you know where a bathroom is nearby that I could use?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you help me find a eatery close by?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you could you help me find a motel beside the shopping mall?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "I need help",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I need a washroom nearby would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'd appreciate it if you could find a non-vegetarian eatery for me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a veg place to eat nearby beside the college could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm searching for a Kotak Mahindra Bank cash machine nearby, right by the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you point me to a restroom, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please i need to find a non-veg restaurant close to the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Just looking for a hospital beside the temple please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Is there a public bathroom in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a guesthouse near the main road.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Non-vegetarian restaurant in this area please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Hi",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a cash machine in the vicinity close to the park please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I'm searching for a medical center in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a budget stay close by at the main road.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I'm looking for a cash machine operated by ICICI Bank in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I need a non-vegetarian restaurant in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Please i'm searching for a cash machine at the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could use a budget stay in the vicinity please.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me where a restroom is in this neighborhood?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Find a lavatory in this area near the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Is there a non-vegetarian place to eat?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Can you suggest a hotel with a non-veg menu?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Show me a restroom close to the cinema hall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Would you mind showing me is there a non-veg diner?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could use a public toilet around here near the shopping mall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you recommend a restroom nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you know where I could find a Union Bank of India ATM close to this location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Please i'm looking for a eatery in the vicinity near the cinema hall.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Tell me about a emergency room nearby would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Nah",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "I need a cash point would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I'm looking for a Yes Bank cash machine that's not too far from the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Look for a budget-friendly place to stay around here.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Please show me a punjab national bank cash point close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National"
+    }
+  },
+  {
+    "text": "Could you help me find a clinic could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a indian overseas bank atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Any non-veg place to eat close by next to the riverfront.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you show me a non-veg diner nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "What kind of assistance can you offer?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm trying to find a non-vegetarian restaurant around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "What's the nearest cash machine to the police station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Is there a veg place to eat around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Just looking for a medical center in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a money machine please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you help me find a toilet nearby near the railway station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Looking for a vegetarian restaurant to grab a bite.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Howdy!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for an IndusInd cash machine in this vicinity, could you help me out?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "Is there a union bank of india cash machine around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "I need a money machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Would you mind showing me locate a money machine in the vicinity beside the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you axis bank cash machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis"
+    }
+  },
+  {
+    "text": "Could you provide more details?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a healthcare facility in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Catch you later.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I need a non-vegetarian diner in the vicinity would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Can you lend a hand?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hotel around here.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "See ya",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I'd like to find a hospital nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Might I ask if there's an IDBI cash machine nearby that I could use?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Can you help me find a hotel?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a medical center around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind pointing me in the direction of a bathroom nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm trying to find a restroom nearby, not far from the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I'm trying to locate a hospital's emergency department.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Just looking for a emergency room close by beside the temple.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Can i find a idbi bank cash machine in the vicinity could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Would you mind showing me any non-veg restaurant nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm trying to locate a nearby hospital or medical facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you recommend a hotel, please?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you assist me with something?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Yes, i agree.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Nah!",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Do you know where the closest public restroom is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a healthcare facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking to locate a cash machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Please i need a lavatory nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian place to eat in this area please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you guide me to an emergency hospital room located near the main street?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Perfect",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Show me a hdfc bank atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Greetings.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Could you where is the nearest vegetarian diner nearby at the school?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Would you know where I can locate a public toilet?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Looking for a lodging spot close to the market.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I need a kotak mahindra bank atm close by near the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Just looking for a hospital around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Yes",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a nearby hospital emergency room that's easily accessible from the main highway.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you direct me to a restroom nearby, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need to find a hospital close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me could you help me find a lavatory in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a healthcare facility nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Capabilities",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm not entirely sure I follow what you mean.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a lavatory in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you find the nearest IndusInd ATM near the market area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Okay!",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Can you recommend a non-veg eatery in proximity to the local police precinct?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Just looking for a non-vegetarian eatery in this area would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Sounds good",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Any healthcare facility in the vicinity please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me locate a nearby guesthouse?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a doctor's office nearby near the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you recommend a non-vegetarian restaurant nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm searching for a place to stay overnight.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a bathroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind suggesting a place to stay?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me find a doctor's office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Where is the nearest motel in this area could you?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Find a veg hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm trying to find a bathroom in this vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Locate a healthcare facility nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you i'm looking for a medical center around here beside the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need to find a vegetarian eatery in the vicinity next to the park.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Can you please recommend a vegetarian hotel for me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Can you help me locate a public toilet in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can i find a kotak mahindra bank money machine nearby would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Would you be willing to help me locate a non-meat hotel nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm looking for a iob money machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "I'd love to find a hospital close to my current location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can i find a lodge close by?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need a public toilet beside the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Could you point me to a Punjab National Bank ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National"
+    }
+  },
+  {
+    "text": "Tell me about a healthcare facility close by close to the school could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Just looking for a washroom nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Give me some details, please.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Catch you later",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you recommend a nearby guesthouse for me?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "See ya then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a public restroom around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Say again?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Is there a vegetarian eatery close to here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Please show me a washroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you recommend any vegetarian eateries nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Find a atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you recommend a vegetarian restaurant nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you suggest a vegetarian restaurant near the college?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I need a icici cash machine in the vicinity would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian restaurant to stay at.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Please doctor's office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a medical facility nearby, preferably a hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Excuse the confusion.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me just looking for a lavatory nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need to find a non-vegetarian eatery close by at the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for a hotel near the lake in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could use a doctor's office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Find a bank of baroda cash point around here near the park.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I'm not quite sure what's going on.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Please i need to find a medical center near the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "I'm looking for a kotak mahindra bank money machine beside the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you tell me about a loo nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please can i find a non-veg eatery?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby hospital near the college, could you help me out?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you recommend a place that serves meat-based dishes?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Nope",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Locate a non-vegetarian hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Please just looking for a healthcare facility close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a veggie hotel near the park.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I'm looking for an IndusInd Bank ATM that's close to the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Can i find a money machine around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I need a washroom close to the lake would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you show me where the closest restrooms are around here, near the riverfront area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Is there a indusind bank atm around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "Can you recommend a veggie restaurant near the college campus?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could use a cash point close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby bathroom facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Place to stay beside the market.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I need to find a axis bank cash point please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis"
+    }
+  },
+  {
+    "text": "Can you tell me where a cash machine is situated close to the market?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Locate a lavatory.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need to find a lodge at the post office.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Can i find a state bank of india cash machine in the vicinity would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "I'm looking for a non-veg diner close by next to the cinema hall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Yes.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Explain more...",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could use a eatery close by beside the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Please is there a lavatory nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please could you help me find a cash point?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Would you know if there's a diner that serves meat and seafood dishes?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Where is the nearest veg restaurant close by could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Locate a diner around here.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a place to dine on non-meat options in the surrounding area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Lavatory in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby medical center, could you help me find one?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Later now",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a nearby Union Bank of India ATM if there's one available?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Union bank of india cash machine nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Bye!",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Bathroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please i need a non-vegetarian restaurant next to the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "I'm looking for a restroom facility in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm trying to find a veg-friendly eatery close to my current location.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Find a restaurant.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a non-veg place to eat in the vicinity beside the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "I'm having trouble understanding, could you elaborate more?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Is there a hotel near the green area?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby hospital to visit.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "What do you mean...",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Please i need to find a atm near the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you i need to find a yes bank money machine in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "Please could use a atm close by at the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you find a emergency room close to the post office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Is there a vegetarian eatery close to the college?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'd like to know where a Kotak Mahindra Bank cash machine is located nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "I'm looking for an HDFC Bank ATM in this vicinity, please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Locate a non-vegetarian place to eat please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm searching for a toilet.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Sup bot",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a bathroom in this area around here please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Kotak mahindra bank atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Could you show me where the nearest ICICI ATM is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Could you show me the restroom facilities around here at the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Do you know where the bathroom is located?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a vegetarian eatery next to the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Find a lodge along the river.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Can you show me a nearby eatery?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me find a emergency room close by near the shopping mall please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a non-vegetarian restaurant around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm trying to locate an ATM near the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Info please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for an affordable place to stay in this area, close to the college campus.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you toilet?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Find a veg hotel nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you assist me in locating an ICICI ATM nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Could you i'm looking for a vegetarian eatery nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Please tell me about a doctor's office next to the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Locate a diner nearby.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Clinic next to the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could use a vegetarian eatery nearby next to the police station would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Can you suggest a non-vegetarian restaurant for me to try?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Appreciated now",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a cash point nearby next to the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Locate a doctor's office around here at the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Find a emergency room close by next to the shopping mall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Excuse me...",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Would it be possible to find a guesthouse close to my current location?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Can you help me locate a hotel around here?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a doctor's office nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a vegetarian eatery could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Please find a restroom in the vicinity next to the park.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of a nearby public restroom, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Any restroom close by beside the post office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "What can you do",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm trying to locate a bathroom in this vicinity please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need to find a eatery in the vicinity beside the school.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Help",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you any medical center?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a non-vegetarian diner in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Veg eatery in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I need to find a vegetarian eatery beside the railway station please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Hello bot",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Do you know where a public restroom is located around here, close to the market?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'm searching for a budget stay around here near the college.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you help me find a indusind bank atm in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "What can you do please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Is there a axis bank cash machine nearby close to the temple?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "I'm trying to locate an HDFC cash machine around this area please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Is there a bathroom I can use in the surrounding area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Medical center.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Are there any restaurants that serve non-vegetarian food?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Good afternoon",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Wrong",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a vegetarian restaurant nearby beside the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Locate a hospital nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me find a healthcare facility next to the school could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Locate a hdfc bank money machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Could you help me find a clinic nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a healthcare facility around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Where is the nearest non-vegetarian diner close by?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you show me some affordable options for a place to stay around here?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i'm searching for a atm around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian restaurant to dine at.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Any eatery.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest hotel at the railway station?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I'm looking for a hotel that's close to the university.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Tell me about a kotak mahindra bank atm in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Can you suggest a non-veg eatery located close to the college campus?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you clarify what you're trying to say?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Explain more?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a hdfc cash machine could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I'm searching for a veg hotel in the vicinity please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you show me a hospital in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Excuse me i'm lost.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Find a non-veg diner nearby would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you any hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you provide more information on that?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Howdy :)",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me can i find a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Tell me about a cash point nearby beside the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Restroom close by at the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Could you show me the nearest restroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a state bank of india cash machine could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "Could you show me a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you recommend a hospital nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you could you help me find a indian overseas bank money machine close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Would you mind showing me just looking for a cash point beside the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Pardon?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Please clinic in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Okay",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a restroom in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Non-vegetarian diner at the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for a place to stay in the vicinity please.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Is there a healthcare facility around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a icici bank cash machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I'm not quite following.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'm confused",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'd love to locate a meat-based restaurant in this area if you could help.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could use a clinic around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm searching for a veg diner close by would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Exactly!",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a eatery around here close to the lake please.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I'm trying to locate a public restroom around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a non-veg hotel close by.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm just searching for a hotel.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you please provide information about HDFC's cash machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Tell me about a non-vegetarian restaurant around here would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Correct",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Could you i'm searching for a iob cash point in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "Show me a punjab national bank money machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National"
+    }
+  },
+  {
+    "text": "I'm looking for a hotel in the vicinity near the school please.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need to find a union bank of india money machine in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Could you show me a bathroom near the university?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you can i find a lodge around here?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a restroom close to the cinema hall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Any guesthouse.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Find accommodations for tonight.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Is there a emergency room close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a icici bank cash point nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Where is the nearest place to stay in the vicinity please?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'd be happy to assist you.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Iob cash machine in this area near the police station could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Nah, i don't think so.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a list of hotels near the college?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm searching for a accommodation nearby next to the cinema hall.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Tell me about a hospital in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Good afternoon!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a hdfc bank money machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Non-veg restaurant in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need to find a restroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a motel near the park.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Just looking for a emergency room nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me locate an ICICI ATM close to my current location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Is there a clinic close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me any doctor's office nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm trying to find a money machine from ICICI Bank, can you show me where it is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Just looking for a hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you show me where an HDFC Bank ATM is in this neighborhood?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Find a money machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Show me a veg eatery beside the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Hi :)",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Veg restaurant in this area beside the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for an ATM nearby, is there one close to my current location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Where is the nearest place to stay in the vicinity near the railway station would you mind showing me?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I'm searching for a medical center in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Info",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could use a veg diner.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you show me if there's a restroom nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you show me the nearest ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Would you mind showing me veg eatery nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm searching for a non-vegetarian eatery close by.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need to find a inn would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Please just looking for a hospital nearby near the shopping mall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Find a eatery.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Help me",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Show me a kotak mahindra bank cash point in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Please hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me just looking for a hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need a icici bank atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I need a accommodation please.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Help me please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a toilet nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm trying to locate an ICICI Bank ATM machine close to my current location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need a non-vegetarian eatery in this area beside the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you recommend a restroom near the highway?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you non-vegetarian hotel close by?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a bit of guidance here.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could use a healthcare facility near the temple.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Would you mind showing me is there a hdfc bank cash machine around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I need a veg place to eat.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Can you provide me with some information?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Loo.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind showing me show me a atm in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Show me a non-vegetarian hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could use a vegetarian place to eat in this area next to the bus stand.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hospital close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Info?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you point me to the nearest washroom near the cinema?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Could you show me where a Kotak Mahindra Bank ATM is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Any emergency room nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Just looking for a lodge.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you direct me to the closest hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a state bank of india money machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "I'm looking for a nearby veggie eatery close to the university.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you be able to recommend a budget-friendly accommodation nearby?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a non-veg diner close by please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you i need to find a place to stay in the vicinity next to the school?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "I need to find a washroom nearby would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you show me where a restroom is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a medical center close by at the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of a restroom nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Any bathroom in this area please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Show me a emergency room beside the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'm searching for a healthcare facility would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a restaurant would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a union bank of india money machine in this area close to the school would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you please show me a Kotak Mahindra ATM location near the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you point me to a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you be able to display some budget-friendly lodging options for me?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Please i need to find a hotel in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a public restroom nearby, is there one close to the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Would you mind showing me i'm searching for a emergency room nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can you recommend a nearby hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a iob cash point nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "Please i'm searching for a restaurant.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a place to stay around here could you?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Locate a indusind bank atm near the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Tell me about a toilet close to the park.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Just looking for a state bank of india cash machine in this area at the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you recommend a lodging option nearby?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i'm looking for a hospital nearby close to the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Find a atm around here near the temple.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "I don't understand i'm lost.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Show me a non-veg hotel nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Incorrect!",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Hi bot",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Could use a restaurant.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Find a non-vegetarian eatery near the bus terminal.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Could you direct me to a medical facility?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can i find a cash point?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Where is the nearest clinic in this area please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Any union bank of india cash machine close by would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Is there a indian overseas bank money machine around here would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Is there a hospital emergency department around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need a icici bank atm nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Is there a veg diner in this area close to the school?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Any veg hotel in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Can i find a eatery nearby at the bus stand would you mind showing me?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "I need a hdfc cash point in the vicinity beside the park could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Is there a doctor's office nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "What do you mean",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a bank of baroda cash point.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "Later",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Is there a bathroom beside the cinema hall?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Cheers",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Please i'm looking for a bank of baroda atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "Can you point me in the direction of a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Don't think so!",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Could you locate a iob atm in the vicinity near the main road?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Can you direct me to a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Yo",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a atm nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you i'm searching for a cash machine close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Can you point me to a Bank of Baroda cash machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "I'd like to find a bathroom close to my current location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Sounds good.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a money machine close by close to the lake could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Can you tell me the nearest hospital's directions?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Non-veg eatery around here could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a vegetarian hotel close by.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Iob money machine nearby near the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Is there a non-veg diner nearby?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you i need to find a clinic in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you please point me in the direction of a restroom nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Pardon...",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me where an ATM is located near the riverfront area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you assist me in locating a nearby lodging option?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Can you elaborate on the tasks you can perform?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Place to stay close by would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Are there any hospitals in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Locate a healthcare facility close to the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Could you recommend a Kotak Mahindra ATM nearby, perhaps near the police station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "I'm looking for a place to stay around here.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Any loo in the vicinity next to the main road please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "How do you work please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me locate a washroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a non-meat restaurant nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Just looking for a idbi bank cash machine would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Is there a motel nearby?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need a clinic in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Find a loo in the vicinity near the railway station please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Can i find a non-veg hotel around here would you mind showing me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Just looking for a non-veg place to eat around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Would you mind showing me i'm looking for a doctor's office near the post office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Restroom close by please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a state bank of india money machine nearby could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "Any diner around here at the shopping mall would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you show me the nearest hospital around the lake?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I need a place to stay close by.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a cash machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Find a diner would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "See you!",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Don't think so",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Would you be so kind as to show me the location of a cash machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you can i find a canara bank atm in the vicinity next to the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you recommend a restaurant that serves non-vegetarian food?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Good evening",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Farewell then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Appreciated",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me locate a clinic close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a place to stay.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hotel that serves vegetarian cuisine.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm searching for an accommodation in the nearby area.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "A place to rest near the market.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Tell me about a clinic next to the riverfront could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Cash point around here near the post office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Locate a yes bank cash point close by at the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for a washroom nearby close to the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you direct me to the nearest bathroom in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a veg eatery nearby at the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Could you suggest a vegetarian restaurant near me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a non-veg eatery in this area could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could use a non-vegetarian diner at the railway station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Could you where is the nearest pnb money machine around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "PNB"
+    }
+  },
+  {
+    "text": "Public toilet around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Sup",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Find a hotel close by near the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Would you mind showing me is there a lavatory in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Find a hotel around here.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a hdfc bank cash machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Would you know where I could find an ATM in this immediate vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "I'm looking for an IndusInd ATM near the college campus.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Where is the nearest clinic around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm searching for a vegetarian restaurant nearby beside the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Would you mind showing me just looking for a veg hotel in the vicinity close to the temple.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "I need to locate a lodging option.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a emergency room.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Later!",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a emergency room close by close to the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you recommend a place to stay close by?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Is there an available toilet nearby the main thoroughfare?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Iob cash machine in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB"
+    }
+  },
+  {
+    "text": "Any doctor's office nearby could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Where is the nearest inn around here please?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a veg eatery.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Say again",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you point me to a hospital around the college please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you show me a non-meat restaurant in the surrounding area, please?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you help me locate an Indian Overseas Bank ATM in the nearby area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "The features of this bot",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Please can i find a restaurant beside the college?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you point me to a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you emergency room?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a non-vegetarian eatery next to the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Show me a icici bank cash machine could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Could use a vegetarian eatery around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you i need to find a restaurant?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Is there a veg restaurant next to the college?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Accommodation around here beside the temple.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Exactly.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a vegetarian hotel nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you could use a washroom in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you tell me where a hospital is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Find a veg restaurant nearby next to the post office would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Loo around here at the college would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Good afternoon :)",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a washroom close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind showing me i'm searching for a vegetarian eatery.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you help me find a canara bank cash machine near the lake could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Do you know if there's a bathroom close to here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a idbi bank cash machine in this area would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Union bank of india cash machine in the vicinity please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Do you know where the restrooms are located on the college campus?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you any idbi bank atm nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Could you tell me about any nearby hospitals?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Locate a hdfc bank atm in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I'm searching for a medical facility in the surrounding area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Thanks for your help",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you direct me to a restroom in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Is there a non-meat eatery in this area that you could suggest?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a medical center in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me locate a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Just looking for a restaurant.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a cash machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Can you show me a list of ATMs around the police station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Is there a medical center around this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a non-vegetarian place to eat near the main road.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Doctor's office in the vicinity at the cinema hall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Where is the nearest guesthouse in this area?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need help?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Please where is the nearest diner around here?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "What's the closest hospital to this location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Exactly, i agree.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Catch you later!",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Show me a veg diner around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you direct me to an ATM in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Yep, i agree.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Are there any restrooms available?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a restroom at the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Find a icici bank money machine in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I need a non-veg place to eat in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Any diner nearby close to the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Let me know if you need anything else!",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a place to stay close to the railway terminal.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Would you mind showing me any clinic next to the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you please recommend a hotel?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a healthcare facility in the vicinity beside the college could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "See you then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a Kotak Mahindra bank ATM nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Please loo around here next to the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you show me a Kotak Mahindra ATM near me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Can you suggest a veggie eatery for me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Howdy.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Can you recommend a non-vegetarian eatery in this vicinity?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Punjab national bank cash machine around here close to the park could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I'm trying to locate a nearby hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you i need a veg eatery?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What's up",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Restroom facilities are available nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is the nearest medical center near the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you i need a money machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Is there a hospital around here would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a veg eatery at the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Please veg place to eat nearby close to the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Find a hotel near the market.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'd appreciate it if you could point out a hospital near the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Locate a washroom in the vicinity near the shopping mall would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could you please show me an IDBI bank ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Would you mind showing me locate a kotak mahindra bank money machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "I need a diner in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a non-veg eatery close to the bus stand.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "I'm in need of a place to rest.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me about a veg hotel in this area?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Restroom around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you assist with please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I need a state bank of india cash point in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "Can you direct me to a public restroom nearby, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Any healthcare facility please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can i find a medical center in this area beside the market?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Could you i'm searching for a hotel close by?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a loo would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Huh...",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Veg place to eat nearby next to the market could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Greetings",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Is there a loo close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Locate a vegetarian restaurant beside the police station please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Book a riverfront room at a local inn.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom in this area please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a non-vegetarian eatery near the market.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'm searching for a diner around here close to the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for a emergency room at the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I'm searching for a icici cash point in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Can you show me a location of an ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Would you know where I could find a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Howdy bot",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Would you know if there's a Kotak Mahindra Bank cash machine around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Please i'm searching for a motel.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need a budget stay nearby.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Wrong, i don't think so.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Ok",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a emergency room near the main road?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Locate a diner close by beside the park.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Hello",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I need a hospital around here please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Please i need to find a medical center around here close to the temple.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "What are your functions please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a vegetarian place to eat close by near the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you mind showing me where is the nearest bank of baroda atm nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "Could you show me a Yes Bank ATM near the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Please i'm searching for a doctor's office in this area next to the park.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Can you recommend a budget-friendly accommodation around here, not too far from the university?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Appreciated then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Show me a inn in this area.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me where is the nearest state bank of india atm around here close to the post office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Negative",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Could you vegetarian diner?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you could use a toilet in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind showing me washroom nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a cash machine in the surrounding area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you please tell me what you're capable of doing?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you can i find a accommodation close to the college?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you assist me in locating an IndusInd Bank ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "Locate a diner near the market.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Find a idbi bank money machine nearby could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Could you help me find a healthcare facility please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need to find a inn.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'd greatly appreciate some guidance right now.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a money machine nearby please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Any punjab national bank money machine in this area close to the park please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Is there a medical center nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could use a emergency room close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a vegetarian restaurant around here near the college would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "I'm looking for a veg hotel around here could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Just looking for a restaurant next to the lake.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Locate a vegetarian restaurant in the vicinity please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Tell me about a vegetarian restaurant in this area close to the riverfront could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I need a loo in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you help me locate an IDBI bank ATM in the surrounding area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Could you help me find a clinic around here close to the college?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you mind showing me tell me about a money machine nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Not really!",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "I need a non-vegetarian diner nearby please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Farewell",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you could use a healthcare facility in the vicinity close to the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I need a yes bank cash machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "Do you know where I could find a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Do you have a suggestion for a hotel that's close to the lake and easily accessible?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "I need a hotel.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me locate a restroom around here please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a lavatory near the cinema hall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "I'm searching for a veg hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Vanakkam",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a hospital.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Looking for a place to stay.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hospital in the area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Find a washroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please i need a veg hotel next to the lake.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of an ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you i'm searching for a union bank of india cash point nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Could you please direct me to a nearby ATM?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Would you be able to give me information about a lodging establishment?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Can you tell me where an HDFC cash machine is around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Cash machine in this area near the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Any kotak mahindra bank money machine nearby close to the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I'd appreciate it if you could help me find an ATM nearby, right by the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I'm searching for a hospital nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can you please show me the nearest medical center around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Please is there a sbi atm?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Is there a punjab national bank cash point in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National"
+    }
+  },
+  {
+    "text": "Hey",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a medical center nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm searching for a cash point would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Just looking for a medical center nearby beside the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Thanks for your help then",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you i need to find a restroom in this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you please clarify what's unclear about this topic?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I need a state bank of india cash point around here could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India"
+    }
+  },
+  {
+    "text": "Goodbye now",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me an ATM close by, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of a guesthouse that's not too far from the local police station?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Nah.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Would you be able to direct me to an IDBI cash machine in this neighborhood?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Guesthouse close by would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a non-veg eatery at the shopping mall could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Could use a healthcare facility in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Just looking for a kotak mahindra bank atm could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "I need a non-vegetarian hotel in the vicinity.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need to visit a healthcare center.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can you help me find an emergency room at the hospital?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Yeah",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me hotel in the vicinity beside the school.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Would you mind showing me could use a vegetarian restaurant close by.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could use a non-veg place to eat in this area beside the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Can you assist me with something?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Can you help me locate a bathroom in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you suggest a place to eat near the market?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Where is the nearest kotak mahindra bank cash point close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Find a restaurant close to the market.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Money machine near the shopping mall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "I need a atm in the vicinity please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Tell me about a eatery in the vicinity please.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Please tell me about a cash point.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Please tell me about a non-veg diner around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm looking for a healthcare facility nearby beside the shopping mall.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "No",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Please can i find a restroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you help me find a icici cash machine in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I'd be happy to help you find a clinic around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for a Kotak Mahindra ATM in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "Could you i'm searching for a restaurant in the vicinity close to the post office?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Looking for a non-vegetarian restaurant near the college.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you mind showing me is there a loo close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Negative.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Can you show me the location of a Punjab National Bank cash machine in this vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National"
+    }
+  },
+  {
+    "text": "I'm looking for a restroom close to the campus.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Would you mind showing me just looking for a hotel close by.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a diner.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need a non-vegetarian hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Any washroom around here would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a medical center, preferably close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a icici cash machine in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Got it",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me could you help me find a washroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you point me in the direction of a restroom that's close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for an Indian Overseas ATM facility around here, is that possible?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "Any inn close by would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could use a non-vegetarian hotel close by would you mind showing me.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Show me a washroom close by next to the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I'm looking for a Union Bank of India money machine nearby, would you happen to know where it is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Can i find a non-veg restaurant in this area please?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Can you recommend a lodging option near the cinema?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Please loo in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a guesthouse at the market.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian eatery close by, can you help me find one?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Would you know where I could find a guesthouse around here?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a restroom that's conveniently located near the movie theater.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "I'm looking for a non-vegetarian place to eat close to the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "I'm searching for a guesthouse close by.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me could use a healthcare facility.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need to find a cash machine next to the school please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Can you show me where an IndusInd bank machine is around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "Just looking for a bank of baroda atm.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "I'm searching for a budget stay in the vicinity would you mind showing me.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you locate a non-veg place to eat?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Goodbye",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a motel beside the cinema hall.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Hdfc money machine in this area close to the main road would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you show me where an HDFC ATM is around this location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Could you show me where the restroom is, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a place that serves vegetarian food.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Can i find a hdfc bank cash machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Just looking for a cash machine close by could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Can you recommend a lodge near the train station?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Can i find a veg diner beside the temple?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "I need to find a washroom around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you tell me where a healthcare center is around this area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm looking for some information.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about a indusind bank cash machine near the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Locate a non-vegetarian restaurant around here please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need to find a doctor's office close by next to the post office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Could you can i find a union bank of india cash point nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Could use a icici bank cash point in this area next to the riverfront please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could use a lavatory around here next to the market please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Where is the nearest non-vegetarian hotel in this area?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Elaborate please",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me the nearest restroom around the lake?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Nope.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Any icici cash machine around here beside the riverfront.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Could you clarify that for me?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you just looking for a pnb cash machine around here beside the park?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "PNB",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Excuse me",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "See you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could use a veg place to eat.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a toilet near the train station; do you know where I can find one?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Okay.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Could you any inn in this area close to the college?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you just looking for a kotak mahindra bank money machine in the vicinity next to the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Can you direct me to the closest medical center around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me locate a Union Bank of India ATM in the surrounding area?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India"
+    }
+  },
+  {
+    "text": "Tell me about a non-veg place to eat.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Locate a meat-based restaurant adjacent to the bus depot.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Huh",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me find a restaurant could you?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Yes bank cash machine nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "I'm looking for a toilet facility around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you tell me about a motel close to the main road?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Could you please help me locate a ICICI Bank ATM around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "I need a vegetarian hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Locate a healthcare facility close to the railway station could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Find a budget stay in this area.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you hdfc atm nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Ttyl!",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a spot to stay overnight.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest doctor's office close by?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Yep",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Locate a yes bank atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "I need to find a hotel next to the temple.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Is there a veg diner would you mind showing me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could use a vegetarian place to eat at the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Greetings!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Pardon",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Is there a restaurant nearby next to the park?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Could use a vegetarian hotel next to the park.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "I need a restroom.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you recommend a lodge close to the park?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Tell me about a cash point around here next to the police station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Could you show me a restroom around here?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm searching for a accommodation in this area.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest canara bank cash machine close by at the main road?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Find a canara bank cash point around here could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara"
+    }
+  },
+  {
+    "text": "Would you mind showing me tell me about a diner.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could use a clinic nearby close to the temple.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Namaste",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Please could use a washroom close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a veg eatery at the railway station please.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Any non-vegetarian place to eat in this area near the police station.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Tell me about a money machine in the vicinity next to the main road.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Find a diner close by.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Non-vegetarian place to eat nearby.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Is there a non-veg eatery nearby beside the temple?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Show me a restroom near the college.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Can you tell me more about your needs?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Incorrect.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Find a hotel that serves non-vegetarian food options.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm craving a veggie-friendly eatery right now.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Yep.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i'm looking for a guesthouse close to the police station.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Help please",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Here are two natural-sounding variations of the sentence:",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I need a cash machine close by near the school.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Could you could you help me find a emergency room in this area at the temple?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "temple"
+    }
+  },
+  {
+    "text": "Indian overseas bank money machine in this area near the railway station.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I need to find a restroom in the vicinity would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can you assist me in locating a nearby hospital that's close to the school?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "Is there a budget stay?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you show me a restroom around the railway station area, please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Explain more i'm lost.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'm searching for a emergency room.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can i find a inn near the riverfront?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "I'm looking for a hospital close to my location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Show me a hospital in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you could you help me find a doctor's office next to the police station?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Can you break it down for me?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "What kinds of assistance are you looking for from me?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you kindly provide some information?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you help me find a yes bank money machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Yes"
+    }
+  },
+  {
+    "text": "Could you recommend an Indian Overseas Bank ATM nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Overseas"
+    }
+  },
+  {
+    "text": "What's up!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Could you tell me where the restroom is nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Tell me about a place to stay close by.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Could you locate a medical center at the market?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Please find a toilet in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Hey :)",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Explain more",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Locate a diner close by.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a hotel near the university in this area.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you assist me in locating a hospital close to my current location?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Manual",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Could you can i find a veg eatery in this area?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Tell me more about a HDFC Bank ATM.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I'm searching for a non-vegetarian hotel.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm in a bit of a pickle and could use some assistance.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I need a bathroom in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could you please provide some assistance?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a healthcare facility?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Not really",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a public restroom around this area, do you know where it is?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Just looking for a restroom in this area could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'm looking for a cash machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Could you tell me if there's an IndusInd ATM nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IndusInd"
+    }
+  },
+  {
+    "text": "Can you recommend a vegetarian accommodation option situated close to the park?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "park"
+    }
+  },
+  {
+    "text": "Where is the nearest state bank of india atm close by at the lake would you mind showing me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "State of India",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Tell me about a toilet around here please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a idbi bank money machine around here.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IDBI"
+    }
+  },
+  {
+    "text": "Negative, i don't think so.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a clinic around here beside the post office.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Can you recommend a nearby medical center?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Is there a bathroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need to find a loo in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Later.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i need a motel close by.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i need to find a loo close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Please find a doctor's office at the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Could you recommend a hotel around here, preferably one that's close to the campus?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Just looking for a lavatory.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Would you mind showing me can i find a icici bank money machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "Could you tell me where a restroom is near me?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is the nearest non-veg eatery in the vicinity next to the shopping mall could you?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Looking for a place that serves meat dishes near this location.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "I'm looking for an HDFC bank ATM nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I'm looking for a medical center around here on campus.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "college"
+    }
+  },
+  {
+    "text": "Could you locate a emergency room in the vicinity?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Could you help me find a guesthouse close by?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Thank you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Could use a union bank of india money machine in the vicinity near the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Union of India",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Could use a guesthouse close by could you?",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a toilet close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Find an affordable accommodation in this vicinity.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a money machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "How do you work",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Would you be able to help me find a healthcare center situated next to the school?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "school"
+    }
+  },
+  {
+    "text": "I need a kotak mahindra bank money machine.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "I need a motel around here.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Can you assist with",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I don't understand?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me i need a vegetarian eatery beside the shopping mall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "Sure, i agree.",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Find a restaurant close to my current location.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "I need to find a emergency room nearby.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can you suggest some non-meat eating places around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you recommend a nearby vegetarian restaurant?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I need to find a healthcare facility in the vicinity next to the railway station could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Just looking for a veg restaurant nearby near the post office.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Could you show me a restroom?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Could use a restroom around here would you mind showing me.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Can i find a non-vegetarian eatery would you mind showing me?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Could you locate a money machine?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Bye.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Manual?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for a place to stay close to the movie theater.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "Would you mind showing me locate a kotak mahindra bank atm close by.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra"
+    }
+  },
+  {
+    "text": "I'm searching for a public toilet in this area.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "What functions do you offer?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Howdy",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Would you mind showing me diner close by.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Just looking for a medical center.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a hdfc bank money machine in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "Ttyl",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Emergency room beside the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "I'm not quite sure about this, could you elaborate more?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I'm looking for an HDFC Bank ATM that's close to my location.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "HDFC"
+    }
+  },
+  {
+    "text": "I need a washroom at the bus stand.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Hey bot",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Diner nearby.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Could use a veg place to eat beside the cinema hall.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "cinema hall"
+    }
+  },
+  {
+    "text": "I'm trying to locate a Bank of Baroda ATM.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Bank of Baroda"
+    }
+  },
+  {
+    "text": "I need a hospital around here could you?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need a veg hotel around here.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "I'm looking for a vegetarian hotel close to my current location.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Could you help me find a healthcare facility in this area please?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I'm searching for a restaurant that serves non-vegetarian food near the police headquarters.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "police station"
+    }
+  },
+  {
+    "text": "Kotak mahindra bank cash point nearby near the market.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Kotak Mahindra",
+      "landmark": "market"
+    }
+  },
+  {
+    "text": "Would you mind showing me any washroom in the vicinity.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I'd really appreciate some guidance right now.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a sbi atm nearby?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI"
+    }
+  },
+  {
+    "text": "Where is the nearest public toilet around here near the riverfront?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "riverfront"
+    }
+  },
+  {
+    "text": "Can i find a vegetarian restaurant?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Would you mind showing me i need a hospital nearby next to the lake.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "lake"
+    }
+  },
+  {
+    "text": "Namaste!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Could you find a icici bank atm in this area near the post office?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI",
+      "landmark": "post office"
+    }
+  },
+  {
+    "text": "Tell me about a lodge close by beside the railway station please.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Elaborate please i'm lost.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Can i find a veg hotel around here?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Find a nearby medical facility for me, please.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Can you help me find a healthcare facility right next to the mall?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "shopping mall"
+    }
+  },
+  {
+    "text": "I need to find a hotel in this area.",
+    "intent": "find_hotel",
+    "entities": {}
+  }
+]

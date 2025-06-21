@@ -1,0 +1,14 @@
+﻿# Python runtime files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Secret credentials file
+credentials.json
+
+# IDE and OS files
+.vscode/
+.idea/
+*.DS_Store

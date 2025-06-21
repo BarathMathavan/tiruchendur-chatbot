@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiruchendur Assistant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        :root {
+            --primary-color: #ff6f00; /* A more thematic orange */
+            --user-bubble-bg: linear-gradient(135deg, #2c3e50, #4a617a);
+            --bot-bubble-bg: #E9E9EB;
+            --background-color: #F7F8FA;
+            --text-primary: #333;
+            --text-secondary: #fff;
+            --typing-dot-color: #A5A5A5;
+            --button-border: #ff8c00;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #D3DDF2;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            width: 100%; max-width: 450px; height: 100%; max-height: 90vh;
+            background-color: #fff; border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            display: flex; flex-direction: column; overflow: hidden;
+        }
+        .chat-header {
+            display: flex; align-items: center; gap: 15px; padding: 20px;
+            background: linear-gradient(135deg, #ff8c00, #ff4500);
+            color: white;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .avatar {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: white; color: var(--primary-color);
+            display: grid; place-items: center; font-size: 1.8em; font-weight: 600;
+        }
+        .bot-info h1 { margin: 0; font-size: 1.2em; color: var(--text-secondary); text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+        .bot-info .status { margin: 0; font-size: 0.9em; color: #d4ffb5; display: flex; align-items: center; gap: 5px; }
+        .bot-info .status::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background-color: #d4ffb5; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(212, 255, 181, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(212, 255, 181, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 255, 181, 0); } }
+        
+        .chat-box { flex-grow: 1; padding: 30px 20px; overflow-y: auto; background-color: var(--background-color); display: flex; flex-direction: column; gap: 12px; }
+        
+        .message { display: flex; max-width: 85%; opacity: 0; transform: scale(0.8) translateY(20px); animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes popIn { to { opacity: 1; transform: scale(1) translateY(0); } }
+
+        .bubble { padding: 12px 20px; border-radius: 20px; line-height: 1.6; white-space: pre-wrap; font-size: 0.95em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); word-wrap: break-word; }
+        .bubble a { color: var(--primary-color); text-decoration: underline; font-weight: 600; }
+        
+        .bot-message { align-self: flex-start; }
+        .user-message { align-self: flex-end; }
+        .bot-message .bubble { background-color: var(--bot-bubble-bg); color: var(--text-primary); border-bottom-left-radius: 5px; }
+        .user-message .bubble { background: var(--user-bubble-bg); color: var(--text-secondary); border-bottom-right-radius: 5px; }
+
+        .typing-indicator { align-self: flex-start; visibility: hidden; opacity: 0; transition: opacity 0.3s; }
+        .typing-indicator.visible { visibility: visible; opacity: 1; }
+        .typing-indicator .bubble { padding: 15px 20px; }
+        .typing-indicator span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: var(--typing-dot-color); animation: typing 1.4s infinite both; }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+
+        .input-area { display: flex; padding: 15px; background-color: #fff; border-top: 1px solid #f0f0f0; gap: 10px; align-items: center; }
+        #message-form { display: contents; }
+        #user-input { flex-grow: 1; border: 1px solid #ddd; background-color: #fff; border-radius: 20px; padding: 12px 20px; font-size: 1em; outline: none; transition: border-color 0.2s; }
+        #user-input:focus { border-color: var(--primary-color); }
+
+        #send-button { background: var(--primary-color); color: var(--text-secondary); border: none; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; font-size: 1.4em; display: grid; place-items: center; flex-shrink: 0; transition: all 0.2s ease; }
+        #send-button:hover { background-color: #e65100; transform: scale(1.1); }
+        #send-button:disabled { background-color: #A5A5A5; cursor: not-allowed; transform: none; }
+
+        /* New styles for buttons inside the chat */
+        .button-container { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+        .chat-button { background-color: #fff; border: 1px solid var(--button-border); color: var(--button-border); padding: 8px 12px; border-radius: 20px; cursor: pointer; text-align: center; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 0.9em; transition: all 0.2s ease; }
+        .chat-button:hover { background-color: var(--button-border); color: white; }
+        .chat-button:disabled { background-color: #e0e0e0; color: #a0a0a0; border-color: #e0e0e0; cursor: not-allowed; }
+
+        @media (min-width: 768px) { .chat-container { max-width: 480px; height: 88vh; } }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="avatar">T</div>
+            <div class="bot-info">
+                <h1>Tiruchendur Assistant</h1>
+                <p class="status">Online</p>
+            </div>
+        </header>
+
+        <main class="chat-box" id="chat-box">
+            <!-- Messages will be dynamically inserted here -->
+            <div class="message typing-indicator" id="typing-indicator">
+                <div class="bubble">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="input-area">
+            <form id="message-form">
+                <input type="text" id="user-input" placeholder="Type a message or number..." autocomplete="off" autofocus>
+                <button type="submit" id="send-button" aria-label="Send Message">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </form>
+        </footer>
+    </div>
+    
+    <!-- This is the 'brain' of the dynamic interface -->
+    <script>
+        // --- DOM ELEMENT REFERENCES ---
+        const chatBox = document.getElementById('chat-box');
+        const messageForm = document.getElementById('message-form');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const typingIndicator = document.getElementById('typing-indicator');
+        
+        // The unique user_id is passed from the Flask template
+        const USER_ID = '{{ user_id | tojson | safe }}';
+
+        // --- INITIALIZATION ---
+        // When the page loads, fetch the initial welcome message from the bot.
+        document.addEventListener('DOMContentLoaded', () => {
+            // We use an empty string to trigger the new user flow in the backend.
+            sendMessageToServer(""); 
+        });
+
+        // --- EVENT LISTENERS ---
+        messageForm.addEventListener('submit', handleFormSubmit);
+        // Add event listener to the chat box to handle clicks on buttons
+        chatBox.addEventListener('click', handleChatBoxClick);
+
+
+        // --- CORE FUNCTIONS ---
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const question = userInput.value.trim();
+            if (!question) return;
+
+            addMessage({ text: question }, 'user'); // Display user's message
+            userInput.value = '';
+            sendMessageToServer(question);
+        }
+        
+        function handleChatBoxClick(event) {
+            const chatButton = event.target.closest('.chat-button');
+            if (chatButton && !chatButton.disabled) {
+                event.preventDefault();
+                const payload = chatButton.dataset.payload;
+                const buttonText = chatButton.textContent.trim();
+                
+                // Display the user's choice as if they typed it
+                addMessage({ text: buttonText }, 'user');
+                
+                // Disable all buttons in the same container to prevent re-clicking
+                const buttonContainer = chatButton.closest('.button-container');
+                if (buttonContainer) {
+                    buttonContainer.querySelectorAll('.chat-button').forEach(btn => btn.disabled = true);
+                }
+                
+                // Send the button's payload to the server
+                sendMessageToServer(payload);
+            }
+        }
+
+        async function sendMessageToServer(message) {
+            const isInitialMessage = message === "";
+
+            // Show typing indicator unless it's the very first invisible message
+            if (!isInitialMessage) {
+                showTypingIndicator(true);
+            }
+            toggleInput(false);
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: message, user_id: USER_ID })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                // The backend sends a dictionary with 'text' and optional 'buttons'
+                const data = await response.json();
+                
+                showTypingIndicator(false);
+                addMessage(data, 'bot'); // Pass the whole data object
+            
+            } catch (error) {
+                console.error('Error fetching bot response:', error);
+                showTypingIndicator(false);
+                addMessage({ text: 'Sorry, I am having trouble connecting. Please try again later.' }, 'bot');
+            } finally {
+                toggleInput(true);
+            }
+        }
+
+        /**
+         * Adds a message to the chat box.
+         * @param {object} data - The message data object { text, buttons? }.
+         * @param {string} sender - 'user' or 'bot'.
+         */
+        function addMessage(data, sender) {
+            if (!data || !data.text) return;
+
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', `${sender}-message`);
+
+            const bubbleElement = document.createElement('div');
+            bubbleElement.classList.add('bubble');
+            
+            // Use innerHTML to render HTML tags from the bot response (like <a>)
+            const textElement = document.createElement('div');
+            textElement.innerHTML = data.text;
+            bubbleElement.appendChild(textElement);
+            
+            // If there are buttons, create and append them
+            if (data.buttons && data.buttons.length > 0) {
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'button-container';
+                data.buttons.forEach(btnData => {
+                    const button = document.createElement('button');
+                    button.className = 'chat-button';
+                    button.textContent = btnData.text;
+                    // Store the payload in a data attribute to be sent to the server
+                    button.dataset.payload = btnData.payload;
+                    buttonContainer.appendChild(button);
+                });
+                bubbleElement.appendChild(buttonContainer);
+            }
+            
+            messageElement.appendChild(bubbleElement);
+            // Insert the new message before the typing indicator
+            chatBox.insertBefore(messageElement, typingIndicator);
+            
+            // Scroll to the new message
+            scrollToBottom();
+        }
+
+        function showTypingIndicator(show) {
+            typingIndicator.classList.toggle('visible', show);
+            if (show) {
+                scrollToBottom();
+            }
+        }
+
+        function toggleInput(enabled) {
+            userInput.disabled = !enabled;
+            sendButton.disabled = !enabled;
+            if (enabled) {
+                userInput.focus();
+            }
+        }
+
+        function scrollToBottom() {
+            chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

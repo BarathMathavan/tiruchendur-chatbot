@@ -1,0 +1,4484 @@
+[
+  {
+    "text": "Path to bus stand near railway station",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "ஏடிஎம்லேர்ந்து எனக்கு பணம் எடுக்கணும்",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Restaurants nearby could you tell me",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையத்திற்கு அருகில் ஓய்வறை எதுவும் இருக்கிறதா என்று சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Find a lodge near railway station",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "சல்யூம்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "சாப்பிடவும் தங்கவும் மலிவான இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "ஹாய்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "சேவையின் கட்டணம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் பஞ்சாப் நேஷனல் வங்கியின் ஏடிஎம் எங்கே இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "சாமி, நன்றி.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Canara bank i need money from atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Iob find an atm near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "என்னன்னு சொல்றீங்க?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "கழிவறை எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Path to bus stand near railway station please",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் நான் வெஜ் ஹோட்டல் இருக்கா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பெரிய சாலைக்கு அருகிலும், கோயிலுக்கு அருகிலும் கார் நிறுத்த எங்கே இடம் கிடைக்கும்ன்னு சொல்லுங்களேன்?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்துல சாப்பாடு சாப்பிடற இடம் தேடுறேன்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I need a toilet near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டு அருகிலுள்ள கடற்கரைக்கு எப்படிப் போகலாம்?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் ஒரு கழிப்பறை தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near valli's cave please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகை அருகில் தங்கும் இடம் எதுவும் இருக்கா பாருங்க.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Pooja times for murugan temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Iob i need money from atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near main road please",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Correct",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "ஓய்வறை எங்க இருக்குன்னு  தேடிட்டு இருக்கேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "அருகிலேயே இருக்கிற ஹோட்டல்களைப் பத்தி சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் பக்கத்துல நான் வெஜ் சாப்பாடு இருக்கற ஹோட்டல் எது?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "விளக்கமாத்திற்கு அருகில் எங்கே குறைந்த விலைக்கு தங்கலாம்னு சொல்லுங்க?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "விளக்கேரியருகே கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need money from atm near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Veg vegetarian restaurant near main road",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் உள்ள அவசர மருத்துவமனை எங்கே என்று சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Car parking space near railway station",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "எங்கே ஏடிஎம் இருக்குன்னு பாருங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Restaurants nearby near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "வள்ளியம்மையின் குகை அருகில் இருக்கிற பேருந்து நிறுத்தத்திற்கு போகிற வழி என்ன?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Looking for a washroom near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "காரை நிறுத்த இடம் பார்க்கணும்.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "சாமி",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்குப் போறதுக்கு என்ன உடை அணிய வேண்டும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "என்னன்னு எனக்குத் தெரியல, சொல்லுங்க.",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "பிறகு சந்திக்கலாம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோவில் அருகில் சாப்பிட ஒரு இடம் தேடுகிறேன்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "எனக்குத் தெரியல",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோயிலின் பூஜை நேரங்களைத் தெரிந்து கொள்ள வேண்டும்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் ஒரு தங்கும் இடம் தேடுங்க.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சீப்ளுக்கு அருகில் உள்ள ஆக்சிஸ் வங்கியின் ஏடிஎம் எங்கு இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "ஓய்வு அறை தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Car parking space near beach",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Looking for a washroom near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Thanks",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் நான் சைவமில்லாத சிக்கன் பிரியாணி எங்கு வாங்கலாம்?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "மருகன் கோவிலுக்கு அருகில் இருக்கும்  அருகில் உள்ள ஓய்வறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Looking for a washroom near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு அருகில் குறைந்த விலை தங்கும் இடம் தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "மருதமலை கோவிலுக்கு அருகிலுள்ள மருத்துவமனை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சேவையின் கட்டணம் என்ன விலை?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "I need a toilet near railway station could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "அந்தக் கோவிலுக்கு என்ன உடை அணிய வேண்டும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Parking near temple near main road could you tell me",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "அந்தக் கோயிலின் நேரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள கழிவறை எங்கே இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "நன்றி",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Dress restrictions for tiruchendur temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "கழிப்பறை எங்கேன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோயிலுக்கு அருகில்  பார்க்கிங் இடம் கிடைக்குமா?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Where is a cash machine near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "தலைமைச் சாலையருகே ஏடிஎம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "What are the special poojas and cost",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "கலங்கரை விளக்கம் அருகிலும், கோவில் அருகிலும்  கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "மருதமலை கோயில் அருகில் உள்ள மருத்துவமனை எது அருகில் இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "பஞ்சாப் நேஷனல் வங்கியில் ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "சாரி",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்கு, அதோட விலை எவ்வளவுன்னு சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "ஓய்வறை எங்க இருக்குன்னு பார்க்கிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "பெரிய சாலையருகே, கோவில் அருகில் கார் நிறுத்த இடம் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Car parking space near valli's cave",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Parking near temple",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "பஞ்சாப் நேஷனல் வங்கியின் காசு எடுக்கும் இயந்திரம் ரயில் நிலையம் பக்கத்தில் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "உங்கால என்னென்ன பண்ண முடியும்?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரை அருகில் சைவ உணவு கிடைக்கும் ஹோட்டல்கள் எவை?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "மருதமலை கோவிலுக்கு அருகில் மலிவு விலை தங்கும் இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "கனரா வங்கியில் ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பேருந்து நிலையம் அருகில் ஒரு ஹோட்டல் இருக்கிறதா சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சாமானிய விலை கொண்ட தங்கும் இடம்",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Hello",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "சமீபத்தில் உள்ள உணவகங்கள் சொல்லுங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ஏடிஎம் எங்கேன்னு சொல்லுங்க?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Find a lodge near valli's cave",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "பேசுவோம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Sure",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Punjab national bank where is a cash machine near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "சல்யூட்.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "ஒரு ஹோட்டல் தேடணும்",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "முகிலன் கோயிலில் பூஜை நேரங்கள் என்னன்னு சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "கோயில் பக்கத்திலும், பஸ் ஸ்டாண்ட் பக்கத்திலும்  கார் நிறுத்த இடம் இருக்கிறதா சொல்லுங்க?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பிரதான சாலையில  கனரா வங்கிக்கு அருகில் உள்ள ஏடிஎம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Emergency medical center near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "தகவல் வேண்டும்.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "சாமானிய விலைல தங்கற இடம் வேணும்.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு எப்படிப் போகலாம்ன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "See you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டுக்கு  அருகிலும், கோயிலுக்கு அருகிலும்  கார் நிறுத்த இடம் எங்கேன்னு சொல்ல முடியுமா?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு அருகிலும், கலங்கரை விளக்கத்திற்கு அருகிலும்,  பார்க்கிங் இடம் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need money from atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "முருகன் கோவில் அருகில் குறைந்த விலை தங்கும் விடுதி தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகை அருகில் ஓய்வறை எதுவும் இருக்கிறதா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "வள்ளியின் குழியை அருகில் உள்ள கேனரா வங்கியின் ஏடிஎம்-ஐ கண்டுபிடிக்க முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "மருதமலை கோவிலுக்கு அருகில் உள்ள அவசர மருத்துவமனை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "திருச்செந்தூர் கோயிலில் அனுமதிக்கப்பட்ட ஆடைகள் பற்றிய விவரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் பக்கத்துல சைவம் மட்டும் கொடுக்கிற ஹோட்டல் இருக்கா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட்  அருகில் இந்தியன் வங்கியோட காசு எடுக்கற இயந்திரம் எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "விளக்கமாத்திற்கருகில் இருக்கும் ஏடிஎம்ல பணம் எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Help",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்கு, அதுக்கு எவ்வளவு செலவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "முருகன் கோயிலின் பூஜை நேரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சூடான உணவகங்கள் எங்கே இருக்குன்னு சொல்லுங்களேன்?",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Where is a cash machine could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் சாப்பிட ஒரு இடம் தேடுகிறேன்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கடற்கரை பக்கத்தில் சிக்கன் பிரியாணி கிடைக்கும் நல்ல ஓட்டல் எது?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள கழிவறை எங்கே என்று சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "ஹோட்டல் எங்கே இருக்குன்னு பாருங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் கழிப்பறை எங்கே இருக்குன்னு சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகை அருகில் கார் நிறுத்த எங்கே இடம் கிடைக்கும்?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Hi",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்குது, அதோட விலை எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "முக்கிய சாலையோரம் சைவ ஹோட்டல் எதுவும் இருக்கா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Find a lodge near valli's cave please",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Bye",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "சந்திக்கிறேன்.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வறை எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோயில் அருகில் கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு அருகில் உள்ள மருத்துவமனையின் இருப்பிடம் சொல்லுங்களா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "ஐ.ஓ.பி. ஏடிஎம் ரயில் நிலையம் பக்கத்தில் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "ஒரு டாக்டரைப் பாருங்கன்னு இருக்கு",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "எனக்கு அருகில், கலங்கரை விளக்கம் அருகில், சைவ உணவகம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு எப்படிச் செல்லலாம்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "சாப்பிடற இடத்துல கழிவறை எங்க இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "மருகன் கோவில் அருகேயுள்ள மருத்துவமனை எங்குள்ளது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Emergency medical center near railway station could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "முருகன் கோயிலின் பூஜை நேரங்களைச் சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "I need money from atm near lighthouse",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு வழி சொல்ல முடியுமா?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "ஓய்வு அறை எதுன்னு பார்க்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Tell me about seva tickets",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Where can i park near valli's cave",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "காலை வணக்கம்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "தவறு.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "What can you do",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "அட, ஆமா",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "What to wear to the temple please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "டாக்டர் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Car parking space near lighthouse",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Looking for a place to eat",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "முக்கியச் சாலையருகில் உள்ள முருகன் கோவிலுக்கு வழி சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Cheap place to stay near beach",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட்ல இருந்து எங்கே போகணும்ன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சாப்பிட ஒரு இடம் தேடுகிறேன்",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Budget accommodation",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோவில் அருகில் சைவ உணவு கிடைக்கும் ஹோட்டல்கள் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Looking for a washroom near railway station could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "எனக்கு ஏடிஎம்லே இருந்து காசு வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "சேவைக் கட்டணம் என்ன விலை?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "வணக்கம்.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "I need a doctor near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Nope",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "சாரி, என்ன சொன்னீங்க?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "பேசுகிறோம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள இந்தியன் ஓவர்சீஸ் வங்கியின் ஏடிஎம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "கடற்கரை அருகில் ஓய்வறை எங்கே இருக்குன்னு தெரியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "சரி",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "சாலையோரத்தில் ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்தில் இருக்கிற முருகன் கோவிலுக்கு எப்படிப் போகலாம்ன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "சாப்பிட இடங்கள் அருகில்",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Pooja times for murugan temple could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Path to bus stand near bus stand",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு வழி சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டுக்கு அருகில் சைவ உணவு  உள்ள ஹோட்டல்கள் எங்கே?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Budget accommodation near lighthouse could you tell me",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Find a hotel near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள அவசர மருத்துவமனை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "கோயில் அருகிலும், பெரிய சாலையருகிலும் கார் நிறுத்த இடம் இருக்கிறதா சொல்ல முடியுமா?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "காசு எடுக்கற இயந்திரம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "நன்றி.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Tell me about seva tickets could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "வள்ளியம்மன் குகை அருகில் ஓய்வறை எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள மருத்துவமனை தயவுசெய்து சொல்லுங்கள்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள மருத்துவமனை",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "சல்யம்.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Cheap place to stay near main road",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகிலிருக்கும் பேருந்து நிலையத்திற்கு போக  எப்படி போகணும்?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "இல்லை",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "முக்கிய சாலையை அருகில் இருக்கும் முருகன் கோவிலுக்கு எப்படிப் போகலாம்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "How much are seva kattanam",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "முருகன் கோயிலில் பூஜை எப்போது?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Nearest hospital near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Where can i park please",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "பேசிக்றேன்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "கழிப்பறை தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Veg pure veg food options please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "சந்திக்கிறேன்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Indian bank find an atm near main road could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Veg pure veg food options",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கழிப்பறை எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "சாமி, நன்றி",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் உள்ள பேருந்து நிலையத்திற்கு செல்லும் வழி எது?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சேவை டிக்கெட் விவரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Nearest hospital",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Thank you",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "நான் வெஜ் சாப்பாடு இருக்குற இடங்கள்",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "சாப்பாடு சாப்பிட ஏதாவது இடம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "சந்திப்போம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Help could you tell me",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "No",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "Path to bus stand",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கோவில்  அருகில்  பார்க்கிங்  இடம்  தேவை.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Directions to murugan temple could you tell me",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கோயில் திறப்பு, மூடும் நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் எங்கே கார் நிறுத்த முடியும்?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Parking near temple near bus stand",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Info",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "வேண்டாம்",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "சாமி!",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg non-veg hotel near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "உதவி செய்யுங்கள்",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "சேவை கட்டணம் எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "சாப்பிடறதுக்குப் போகணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள மருத்துவமனை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Veg veg hotel near me near lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "கார் நிறுத்த இடம் வேண்டும்.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "சிக்கன் பிரியாணி (சைவமில்லாதது) எங்கே வாங்கலாம்னு சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் உள்ள அவசர மருத்துவமனை எங்கே என்று சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு எப்படிப் போகலாம்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரை அருகில் இருக்கும் உணவகங்கள்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "கோவிலின் திறப்பு மற்றும் மூடும் நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "எனக்கு டாக்டர் தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "கோவில் திறக்கும் நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Find a hotel near bus stand could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "ரயில் நிலையத்துக்குப் பக்கத்தில் ஓய்வறை இருக்கிற இடத்தைச் சொல்லுங்களேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "சிறப்பு பூஜைகள் மற்றும் அதன் செலவு விவரங்களைச் சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Namaste",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "சாரி, அருகிலிருக்கிற ஹோட்டல்கள் எங்கேன்னு சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "சைவமில்லாத சிக்கன் பிரியாணி எங்கு கிடைக்கும்ன்னு சொல்ல முடியுமா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "விளக்கின விளக்கின அருகில் சைவமில்லாத உணவகங்கள் எங்கே?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "கோயில் திறக்கும், மூடும் நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "What is the dress code for the temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Looking for a washroom could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "முருகன் கோயிலின் பூஜை நேரங்களைச் சொல்லுங்களா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சந்தோஷமா",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு எப்படிப் போகலாம்ன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "சல்யூட்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்கு எப்போது திறந்து இருக்கும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "ஒரு டாக்டரைத் தேடணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "எங்கே ஏடிஎம் இருக்குன்னு சொல்லுங்க?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "அருகில் இருக்கும் ஹோட்டல்களைக் காண்பிங்க.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் நான் வெஜ் ஹோட்டல் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Yes",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "வள்ளியின் குகை அருகில் ஓய்வறை எதுவும் இருக்கிறதா எனத் தேடுகிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வு அறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு அருகில் கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Emergency medical center near bus stand",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் ஒரு டாக்டரைத் தேடுகிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where is a cash machine please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு எப்படிப் போறதுன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கனரா வங்கியில atm எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near railway station",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "விளக்கமாத்திற்கு அருகிலுள்ள ஏடிஎம்ல இருந்து எனக்கு காசு வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "எனக்கு அருகில் இருக்கற சைவ ஹோட்டல் எதுன்னு சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் இருக்குற இடத்துக்குப் பாதை எப்படி?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Veg pure veg food options near lighthouse",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near bus stand",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "விளக்கொளி விளக்கிற்கு அருகில் தங்கும் இடம்  கண்டுபிடிக்க உதவுங்கள்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "I need a toilet near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "சாலை ஓரத்துல  சரியான விலைல தங்க இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "வள்ளி குழியை அருகில் சைவம் மட்டும் விற்பனை செய்யும் ஹோட்டல்கள் எவை?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "பட்ஜெட்டில்  ஒரு  தங்கும்  இடம்  தேவை.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Nearest hospital near murugan temple please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Restaurants nearby",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "குறைந்த விலை தங்கும் இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்கு அருகிலும், பெருஞ்சாலையருகிலும் கார் நிறுத்த இடம் இருக்கிறதா சொல்ல முடியுமா?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Path to bus stand near murugan temple",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani near valli's cave",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Canara bank where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank"
+    }
+  },
+  {
+    "text": "இந்தியன் வங்கியின் ஏடிஎம் எந்த பஸ் ஸ்டாண்ட் அருகில் இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "What is the dress code for the temple could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் எந்த கழிப்பறை அருகில் இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Parking near temple near bus stand could you tell me",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "அந்தக் கோவிலுக்கு என்ன உடை அணியணும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "பேசலாம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Cheap place to stay near bus stand",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வறை எங்கு இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "I need a doctor please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Parking near temple near main road",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் பக்கத்துல இருக்கற ஹோட்டல்கள் எங்கே?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Find an atm near main road could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "சொல்லுங்க",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Pooja times for murugan temple please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Where can i park",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Restaurants nearby near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "கடற்கரை அருகில்  சாமானியமான விலையில் தங்கும் இடம் எதுவும் இருக்கிறதா?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு அருகில் முழுவதும் சைவ உணவு வைத்திருக்கும் ஹோட்டல்கள் எவை?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near lighthouse please",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "முக்கிய சாலையருகில் உள்ள முருகன் கோவிலுக்கு வழி காட்டவும்.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "கோவிலோட திறப்பு, மூப்பு நேரம் சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "ஏடிஎம்லே இருந்து எனக்கு பணம் எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "கோவில் எப்போது திறக்கப்படும், எப்போது மூடப்படும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சாப்பாடு சாப்பிட இடம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "நன்றி, சந்திப்போம்.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Incorrect",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "சந்தோஷம்",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் ஒரு தங்கும் விடுதி தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "திருச்செந்தூர் கோயிலில் ஆடை விதிமுறைகள் பற்றித் தெரிந்து கொள்ள வேண்டும்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "கோவிலின் திறப்பு மற்றும் மூப்பு நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சைவ சாப்பாட்டுக்கடையை எனக்கு அருகில் காட்டுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு அருகில் மலிவான தங்கும் இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சரிதான்",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "அக்‌ஸிஸ் வங்கியோட ஏடிஎம்ல எனக்கு காசு எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank"
+    }
+  },
+  {
+    "text": "Canara bank where is a cash machine near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "ஹோட்டல்  தேடிப் பாருங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "அந்தக் கோவிலுக்கு என்ன உடை அணிய வேண்டும் என்பதைச் சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள பேருந்து நிலையத்திற்கு செல்லும் வழி என்ன?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Vanakkam",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Veg vegetarian restaurant",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள மருத்துவமனை",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "I need a toilet near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் பக்கத்துல நான்-வெஜ் சாப்பாடு கிடைக்கிற இடத்துல சிக்கன் பிரியாணி எங்கே வாங்கலாம்?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் முழுவதும் சைவ உணவு கிடைக்கும் ஹோட்டல் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "அந்தக் கோயில் எப்போது திறக்கப்படும், எப்போது மூடப்படும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "அந்தக் கோயிலின் திறப்பு நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "டாக்டர் வேணும்ங்க சார்/ம்மா",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "வள்ளியின் குழியருகே சைவ உணவு கிடைக்கும் ஹோட்டல்கள் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "மருகன் கோவில் அருகிலுள்ள பேருந்து நிலையத்திற்கு செல்லும் வழி என்ன?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சேவை டிக்கெட் பத்தி சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "பெருஞ்சாலை ஓரத்திலும், கோவில் அருகிலும் கார் நிறுத்த  எங்கே இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Car parking space",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Path to bus stand near valli's cave",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Looking for a washroom near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Find an atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "சைவ விடுதி எதுவும் இருக்கா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "பேருந்து நிலையம் அருகே உள்ள அவசர சிகிச்சை மையம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "I need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "முருகன் கோவில் பக்கத்துல இருக்கற கடற்கரைக்கு எப்படிப் போறதுன்னு சொல்லுங்க?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள எஸ்பிஐ ஏடிஎம்ல இருந்து எனக்கு பணம் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "முழுமையான சைவ உணவு கிடைக்குமா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "சரியானது",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "What to wear to the temple",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "I need a toilet near bus stand could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "When does the temple open and close please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Directions to murugan temple",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "எங்கே கார் நிறுத்த முடியும்?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "மருகன் கோவிலுக்கு அருகில் இருக்கிற பேருந்து நிறுத்தத்துக்கு போற வழி சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சைவமில்லாத, சிக்கன் பிரியாணி எங்கே கிடைக்கும்?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Cheap place to stay please",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்கு அருகில் பார்க்கிங் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Punjab national bank where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "Nearest hospital near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டுக்கு அருகில் உள்ள ஹோட்டல்கள் எவை?",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "I need a doctor",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "சாப்பிட டாக்டர் தேவை, எங்கே இருக்குன்னு சொல்லுங்க?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "சொல்ல முடியுமா உதவி செய்யுங்க",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் ஆக்சிஸ் வங்கியின் ஏடிஎம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட்  கிட்ட கார் நிறுத்த  எங்கே  சாத்தியம்?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "வள்ளியின் குழியருகே சாப்பிட இடம் தேடுகிறேன்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வறை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோவிலுக்குப் போக என்ன உடை அணியணும்னு சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Non-veg non-veg hotel",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு அருகிலும், பஸ் ஸ்டாண்டிற்கு அருகிலும்  பார்க்கிங் இடம் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சிக்கன் பிரியாணி சாப்பிட நல்ல இடம் எங்கே?  (this implies non-veg preference due to chicken biryani mention)",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "சாப்பிடற இடம் தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "மெயின் ரோட் பக்கத்துல ஏடிஎம் இருக்கா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "பேருந்து நிறுத்தத்துக்குப் போகிற வழி எது?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகிலும், கோவில் அருகிலும் கார் நிறுத்த இடம் கிடைக்குமான்னு பாருங்க.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கழிப்பறை தேவை எனக்கு.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is the nearest restroom near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Looking for a place to eat near railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "விளக்கமாத்திற்கு அருகில் மலிவான தங்கும் இடம் இருக்கிறதா சொல்லுங்க?",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Alright",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "மருகன் கோயில் அருகில் உள்ள அருகிலுள்ள கழிவறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள மருத்துவமனை  சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "எனக்குப் புரியல",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg non-veg hotel near railway station",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "கோவிலுக்குப் பக்கத்தில், பெரிய சாலையோரத்தில் கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Emergency medical center near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "சந்திக்கிறோம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு பூஜை நேரம் தெரிஞ்சுக்கணும்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் கிட்ட கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "முழுசைவ உணவு வகைகள் இருக்கிறதா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "உதவி பண்ண முடியுமா சொல்லுங்க",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a place to eat near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் உள்ள கழிப்பறை தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் உள்ள மிக அருகிலுள்ள கழிவறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "Find a hotel",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்துல நான் வெஜ் ஹோட்டல் இருக்கா சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "டாக்டர் வேணும், சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "அப்படி இல்லை",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "முக்கிய சாலையோரத்துல ஏடிஎம் எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "சாப்பிட ஒரு இடம் தேடுகிறேன்.",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ஹோட்டல் தேடுங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையத்துக்கு அருகில் இருக்கிற அவசர மருத்துவமனை எதுன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "வணக்கம்ங்க",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "When does the temple open and close could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "முருகன் கோயிலில் பூஜை நேரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள கழிவறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Punjab national bank find an atm near valli's cave please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "விளக்கினம் அருகிலுள்ள ஏடிஎம்ல இருந்து எனக்குப் பணம் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Axis bank find an atm near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "கோவிலுக்குப் போக என்ன உடை அணியணும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "ஹலோ",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் நான் வெஜ் சாப்பாடு இருக்கிற ஹோட்டல் எது?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Sbi i need money from atm near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "பேசறோம்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "இல்ல",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் அருகில் கார் பார்க்கிங் இடம் வேண்டும்.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Icici where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் உள்ள கழிவறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Emergency medical center",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "சாலை ஓரத்துல ஏதாவது ஏடிஎம் இருக்கான்னு சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "சிக்கன் பிரியாணி (சைவமில்லாதது) எங்கு வாங்கலாம்?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "விளக்கேரியின் அருகில் கார் நிறுத்த  இடம் கிடைக்குமா?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "சாமானிய விலைல தங்க இடம் தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "அருகில் உள்ள கழிப்பறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோவில் எப்போது திறக்கிறது, எப்போது மூடப்படுகிறது?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்துல நான் வெஜ் சாப்பாடு இருக்கற ஹோட்டல் எதுன்னு சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "அப்படி இல்ல",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோயிலுக்கு பூஜை நேரம் தெரிஞ்சா சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சேவைச் சீட்டுகள் பற்றிச் சொல்லுங்களேன்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "பேருந்து நிறுத்தத்திற்கு அருகில் உள்ள அவசர மருத்துவமனை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "Where is a cash machine near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "மருதமலை கோயில் அருகில் மலிவு விலை தங்கும் விடுதி தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் மலிவான தங்கும் இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "I need a doctor could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Non-veg restaurants serving meat near lighthouse please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் எங்கே பார்க்கிங் செய்யலாம்?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "I need a toilet near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "காரை நிறுத்த இடம் எங்கேன்னு பாருங்க.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Nandri",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "அருகிலுள்ள உணவகங்கள்",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "சரியில்லை.",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "சேவை டிக்கெட் விவரங்களைச் சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "ஆம்",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "ஓய்வறை தேடிட்டு இருக்கேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "சாப்பிட  ஒரு  சிறிய  இடம்  தேவை.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரைக்கு எப்படி போகலாம்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "பணம் எடுக்க atm எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "நல்லா இருக்கீங்களா?",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையத்திற்கு அருகில் கார் பார்க்கிங் இடம் கிடைக்குமா?",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "என்ன?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "முக்கிய சாலையில ஏடிஎம் எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "Nearest hospital please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "எனக்கு ஏடிஎம்ல இருந்து காசு வேணும்",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "சாரி, எனக்குப் புரியல.  சொல்லுங்க?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "சரியில்லை",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டுக்கு அருகில் இருக்கிற மருத்துவமனையைத் தேடுகிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "என்னன்னா?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "What are the special poojas and cost could you tell me",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "வல்லியின் குகைக்கு அருகில் பஞ்சாப் நேஷனல் வங்கியின் ஏடிஎம் எங்கே இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "நன்றி, வணக்கம்.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Ok",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "Where is the nearest restroom near murugan temple",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Emergency medical center could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "விளக்கினங்கிட்ட சாப்பாடு சாப்பிடற இடம் தேடுறேன்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Where is a cash machine",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு என்ன போடணும்ன்னு சொல்லுங்க",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "சைவ விடுதி எங்கே இருக்கு?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "மருகன் கோயிலுக்கு எப்படிப் போகலாம்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "விளக்கொளி விளக்கு அருகில் ஒரு தங்கும் இடம் தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு எப்படி வரணும்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்கு என்ன போடணும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "அருகில் உள்ள மருத்துவமனை எங்கு இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "குறைந்த விலையில் தங்க இடம் தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "திருச்செந்தூர் கோவிலுக்குச் செல்லும்போது அணிய வேண்டிய ஆடை விதிமுறைகள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "Not really",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "பஞ்சாப் நேஷனல் வங்கியின் ஏடிஎம், வல்லியின் குகை அருகில் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டு  அருகிலும், கோவில் அருகிலும்  கார்  நிறுத்த  இடம்  தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சேவைக்கட்டணம் எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "விளக்கறங்கூடத்திற்கு அருகில் மாமிச உணவு பரிமாறும் ஹோட்டல்கள் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "வணக்கம்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "கலங்கரை விளக்கம் அருகில் உள்ள சைவ ஹோட்டல் எது?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "சிறப்பு பூஜைகள் மற்றும் அதன் செலவு விவரங்களைத் தெரிவிக்கவும்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "விளக்கெரியருகே ஓய்வறை தேடுகிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "How to get to the beach",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "வள்ளியின் குகை அருகில் உணவகம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு அருகில் உள்ள கடற்கரைக்கு எப்படிப் போகலாம்?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "கோயிலுக்குப் பக்கத்தில் கார் நிறுத்த எங்கே கிடைக்கும்?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உணவகம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "How to get to the beach near bus stand",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பேசணும்.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "What are the special poojas and cost please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "ஏடிஎம் எங்கே இருக்குன்னு சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்கு வழி காட்டுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "சல்யம்",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோயிலின் பூஜை நேரம் தெரிந்து கொள்ள வேண்டும்.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்ட் பக்கத்துல இருக்கிற கடற்கரைக்கு எப்படி போறதுன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கோயில் எப்போது திறந்து இருக்கும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Find a lodge near lighthouse please",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "சிறப்பு பூஜைகள் என்னென்ன,  அதற்கான செலவு எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "பிரதான சாலையில இந்தியன் வங்கியோட ஏடிஎம் எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "பணம் எடுக்கற இடம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "சிறிய விலையில் தங்கும் இடம் வேண்டும்.",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Veg pure veg food options near murugan temple",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்கு, அதுக்கு எவ்வளவு செலவுன்னு சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "சாப்பிடறதுக்கு ஒரு ஓய்வு இடம் தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "மெயின் ரோடுக்கு அருகில் ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "முருகன் கோவிலுக்குப் பக்கத்தில் உணவகம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "அருகில் உள்ள மருத்துவமனை எங்கு இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "பஞ்சாப் நேஷனல் வங்கியில atm எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Punjab National Bank"
+    }
+  },
+  {
+    "text": "முக்கிய சாலையோரம்  பட்ஜெட்ல  தங்க  இடம்  தேடுறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "வள்ளியின் குழியருகே உள்ள கேனரா வங்கியின் ஏடிஎம் எங்கு இருக்கிறது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "ஒரு ஹோட்டல் தேடுங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Veg pure veg food options near beach",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "Iob where is a cash machine near railway station",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "IOB",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Where can i park near bus stand",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சாப்பிடறதுக்கு இடம் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோவிலுக்குப் பக்கத்திலும், பஸ் ஸ்டாண்ட் பக்கத்திலும்  கார் நிறுத்த இடம் தேவை.",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "குறைந்த விலை தங்கும் விடுதி",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "கடற்கரைக்கு எந்த வழியாப் போகணும்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "கோவில் எப்போது திறக்கிறது, எப்போது மூடுகிறது?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "I don't understand",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg non-veg hotel near railway station could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "அக்‌ஸிஸ் வங்கியின் ஏடிஎம்மில் இருந்து எனக்கு பணம் வேண்டும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் உள்ள அவசர மருத்துவமனை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கடற்கரை அருகில் ஓய்வறை தேடுகிறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "How to get to the beach near murugan temple",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் ใกล้ உள்ள கனரா வங்கியின் ஏடிஎம்ல இருந்து எனக்கு பணம் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "ஹோட்டல் தேடிப் பாருங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "Car parking space near bus stand please",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்தில் நான் வெஜ் ஹோட்டல் இருக்கா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "பஸ் ஸ்டாண்டுக்கு அருகிலிருக்கும் மருத்துவமனை எதுன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சரி, நன்றி.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "முழுவதும் சைவ உணவு கிடைக்குமா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "Restaurants nearby please",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "What?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஹோட்டல்கள்",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "ஐசிஐசி வங்கியில் ஏடிஎம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் முழுவதும் சைவ உணவு விருந்தினர் விடுதிகள் இருக்கிறதா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "சமீபத்திய மருத்துவமனை",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்கு,  அதோட விலை எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "How much are seva kattanam please",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "சிக்கன் பிரியாணி  சாப்பிட நல்ல  நான்வெஜ் ஹோட்டல் எங்கே இருக்கு?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "கோயில் அருகே கார் நிறுத்த இடம் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Car parking space please",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "கோவிலுக்குப் போக  உடை அணிய வேண்டிய விதிமுறைகள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "எனக்கு டாக்டர் வேணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "அருகில் உள்ள கழிவறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள முருகன் கோயிலுக்கு வழி காட்டுங்கள்.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம்  அருகில் உள்ள பேருந்து நிறுத்தத்திற்கு செல்லும் வழி எப்படி?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Axis bank i need money from atm",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு அருகில் கார் நிறுத்த இடம் தேடுகிறேன்.",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் நான் வெஜ் சாப்பாடு இருக்கிற ஹோட்டல் எதுன்னு சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "I don't understand could you tell me",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வறை எங்கேன்னு சொல்லுங்க?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "வள்ளி குடைவரை அருகில் உள்ள மருத்துவமனை எங்கு உள்ளது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சேவை டிக்கெட் விவரங்களைச் சொல்லுங்க.",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "பேருந்து நிலையத்துக்கு எப்படிப் போகணும்?",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "சிறப்பு பூஜைகள் என்னென்ன,  அதோட விலை எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "அருகிலுள்ள கழிப்பறை எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "வள்ளி குழியை அருகில் உணவு சாப்பிட ஒரு இடம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "டாய்லெட் எங்கேன்னு சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கனரா வங்கி அருகில், பிரதான சாலையில் ஏ.டி.எம் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "நீங்க என்னென்ன செய்ய முடியும்?",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "சமீபத்திலுள்ள மருத்துவமனை எது என்று சொல்லுங்க?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "பேருந்து நிலையம் அருகில் மலிவான தங்கும் இடம் தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கழிப்பறை எங்கேன்னு தேடுறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "When does the temple open and close",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "அந்தக் கோவிலுக்குப் போகறதுக்கு என்ன உடை அணியணும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "அருகில் இருக்கிற ஹோட்டல்கள் எங்கேன்னு சொல்லுங்க",
+    "intent": "find_hotel",
+    "entities": {}
+  },
+  {
+    "text": "அருகில் அவசர சிகிச்சை மையம் இருக்கிறதா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "Directions to murugan temple near main road",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "வள்ளியம்மன் குகை அருகில் தங்கும் இடம் எங்கே இருக்குன்னு பாருங்க.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சாப்பாட்டுக்குப் போகணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "What are the temple timings",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "கோயில் திறப்பு மற்றும் மூப்பு நேரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "எனக்குப் புரியல, சொல்ல முடியுமா?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "ஆக்சிஸ் வங்கியின் ஏடிஎம் ரயில் நிலையத்திற்கு அருகில் எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Axis Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Indian bank where is a cash machine near bus stand please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு எப்படிப் போறதுன்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {}
+  },
+  {
+    "text": "வள்ளியின் குகைக்கு அருகில் ஒரு கழிப்பறை தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "அது சரி",
+    "intent": "affirm",
+    "entities": {}
+  },
+  {
+    "text": "முருகன் கோவில் அருகே உள்ள மருத்துவமனை எங்கு இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "Atm எங்கே இருக்கு?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "கோவில் எப்போது திறக்கிறது, எப்போது மூடுகிறதுன்னு சொல்ல முடியுமா?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "சைவ உணவு மட்டும் இருக்கிறதா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "சும்மா.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg restaurants serving meat please",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "Emergency medical center near bus stand could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு எப்படிப் போகணும்?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "காரை நிறுத்த இடம் கிடைக்குமா?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "Looking for a washroom",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "கோவிலின் திறப்பு, மூப்பு நேரங்கள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "Looking for a washroom near beach",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "beach"
+    }
+  },
+  {
+    "text": "பேருந்து நிறுத்தம் பக்கத்துல ஹோட்டல் இருக்கா சொல்லுங்க.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "பேருந்து நிறுத்தம்  அருகில்  சீப்பான  தங்கும்  விடுதி  தேடுகிறேன்.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "bus stand"
+    }
+  },
+  {
+    "text": "சிறப்பு பூஜைகள் மற்றும் அதன் செலவு என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "சரி, போறேன்.",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையம் அருகில் உள்ள அவசர மருத்துவமனை எங்கே என்று சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "கோவிலின் திறப்பு, மூடும் நேரம் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "timings"
+    }
+  },
+  {
+    "text": "வள்ளியின் குகை அருகிலுள்ள மருத்துவமனை எது?  சொல்லுங்களேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கனரா வங்கியோட ரயில் நிலையம் பக்கத்துல இருக்கற ஏடிஎம்ல இருந்து பணம் எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "Budget accommodation near murugan temple",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "Murugan Temple"
+    }
+  },
+  {
+    "text": "விளக்கினம் பக்கத்துல இருக்கற ஏடிஎம்லேர்ந்து எனக்கு காசு எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "இந்தியன் வங்கியின் ஏடிஎம், பிரதான சாலையருகே எங்கு இருக்குன்னு சொல்ல முடியுமா?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Indian Bank",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "கார் நிறுத்த இடம் எங்கே கிடைக்கும்?",
+    "intent": "find_parking",
+    "entities": {}
+  },
+  {
+    "text": "விளக்கறங்கார பக்கத்துல ஒரு ஹோட்டல் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "சாப்பிட இடம் தேவை.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "தகவல் தெரிந்து கொள்ள வேண்டும்.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "தகவல் சொல்லுங்க.",
+    "intent": "bot_help",
+    "entities": {}
+  },
+  {
+    "text": "நன்றிங்க",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "என்ன? சொல்ல முடியுமா?",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "Find an atm near main road",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "மாட்டேன்",
+    "intent": "deny",
+    "entities": {}
+  },
+  {
+    "text": "ரயில் நிலையத்துக்கு அருகில் லாட்ஜ்  தேவை.",
+    "intent": "find_lodge",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "விளக்கெரியின் அருகில் கழிப்பறை எங்கே இருக்குன்னு தேடுறேன்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom",
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Emergency medical center please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "எப்படி இருக்கீங்க?",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "திருச்செந்தூர் கோயிலுக்குச் செல்ல ஆடை விதிமுறைகள் என்ன?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "ஐசிஐசி வங்கிக்கு அருகில் உள்ள ஏடிஎம் எங்கே?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "ICICI"
+    }
+  },
+  {
+    "text": "சைவமில்லாத இடத்தில் சிக்கன் பிரியாணி எங்கே கிடைக்கும்?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "சமீபத்திலுள்ள ஓய்வு அறை எது?",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "ரயில் நிலையம் பக்கத்துல இருக்கிற பேருந்து நிறுத்தத்துக்கு எப்படி போகலாம்?",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "சைவ உணவகம் பிரதான சாலையருகே இருக்கிறதா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg",
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "என்னென்ன சிறப்பு பூஜைகள் இருக்கு, அதோட விலை எவ்வளவு?",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "seva_details"
+    }
+  },
+  {
+    "text": "Cheap place to stay",
+    "intent": "find_lodge",
+    "entities": {}
+  },
+  {
+    "text": "Parking near temple near lighthouse",
+    "intent": "find_parking",
+    "entities": {
+      "landmark": "lighthouse"
+    }
+  },
+  {
+    "text": "Emergency medical center near valli's cave could you tell me",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "சாமி நன்றி",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "சாமி, வணக்கம்.",
+    "intent": "greet",
+    "entities": {}
+  },
+  {
+    "text": "Non-veg where can i get chicken biryani could you tell me",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "காசு எடுக்கற இடம் எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "Canara bank find an atm near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "Canara Bank",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "நான் டாக்டரைப் பார்க்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "hospital"
+    }
+  },
+  {
+    "text": "முழு சைவ உணவு கிடைக்குமா?",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "What? could you tell me",
+    "intent": "user_confused",
+    "entities": {}
+  },
+  {
+    "text": "I need a toilet",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "முருகன் கோவில்,  முக்கியச் சாலை அருகில் எப்படி போகலாம்னு சொல்லுங்க.",
+    "intent": "get_directions",
+    "entities": {
+      "landmark": "main road"
+    }
+  },
+  {
+    "text": "I need money from atm please",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm"
+    }
+  },
+  {
+    "text": "கழிப்பறை எங்க இருக்குன்னு சொல்லுங்க.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "restroom"
+    }
+  },
+  {
+    "text": "Where is a cash machine near valli's cave",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "landmark": "Valli's Cave"
+    }
+  },
+  {
+    "text": "கோவிலுக்கு எப்படிப் போகணும்னு சொல்லுங்க",
+    "intent": "get_temple_info",
+    "entities": {
+      "info_type": "dress_code"
+    }
+  },
+  {
+    "text": "சைவ உணவகம் தேவை.",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "veg"
+    }
+  },
+  {
+    "text": "எஸ்பிஐ வங்கியோட ரயில் நிலையம் பக்கத்துல இருக்கற ஏடிஎம்ல பணம் எடுக்கணும்.",
+    "intent": "find_facility",
+    "entities": {
+      "facility_type": "atm",
+      "bank_name": "SBI",
+      "landmark": "railway station"
+    }
+  },
+  {
+    "text": "போறேன்",
+    "intent": "goodbye",
+    "entities": {}
+  },
+  {
+    "text": "மாமிசம் பரிமாறும் நான்வெஜ் உணவகங்கள்",
+    "intent": "find_hotel",
+    "entities": {
+      "food_preference": "non-veg"
+    }
+  },
+  {
+    "text": "கடற்கரைக்கு அருகில் உள்ள உணவகங்கள்.",
+    "intent": "find_hotel",
+    "entities": {
+      "landmark": "beach"
+    }
+  }
+]
