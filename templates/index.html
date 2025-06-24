@@ -168,7 +168,7 @@
         
         .message { display: flex; max-width: 85%; }
         .bubble { padding: 10px 18px; border-radius: 18px; line-height: 1.5; white-space: pre-wrap; font-size: 0.9rem; word-wrap: break-word; }
-        .bubble a { color: #ff6721; text-decoration: underline; font-weight: 500; cursor: pointer; }
+        .bubble a { color: #ff6721; text-decoration: underline; font-weight: 500; }
         
         .bot-message { align-self: flex-start; }
         .user-message { align-self: flex-end; }
@@ -207,24 +207,31 @@
         </header>
 
         <div id="content-viewer" class="content-viewer">
+            <!-- The filename should match what you have in your static/ folder -->
             <img src="{{ url_for('static', filename='tiruchendur_temple.webp') }}" alt="Tiruchendur Murugan Temple">
         </div>
         
         <div class="history-section">
             <h2>History of Tiruchendur Murugan Temple</h2>
-            <p>The <span class="highlight">Tiruchendur Murugan Temple</span> is one of the six sacred abodes of Lord Murugan (Arupadaiveedu). This ancient temple is located in the town of Tiruchendur in Tamil Nadu, India, on the shores of the Bay of Bengal.</p>
-            <p>The temple's history dates back over <span class="highlight">2000 years</span>, with references found in ancient Tamil literature. According to legend, Lord Murugan came to Tiruchendur to wage war against the demon Surapadman. After a fierce battle that lasted several days, Murugan emerged victorious on the sixth day of the Tamil month of Aippasi, which is celebrated as <span class="highlight">Kanda Shashti</span>.</p>
-            <p>The temple complex covers <span class="highlight">15 acres</span> and features a majestic <span class="highlight">157-foot tall gopuram</span> (tower) that was completed in the 17th century. The temple has undergone several renovations over the centuries, with significant contributions from various dynasties including the Pandyas, Cheras, and Cholas.</p>
-            <p>What makes Tiruchendur unique is its location - the temple is built right on the <span class="highlight">seashore</span>, allowing devotees to perform rituals in the sea. The main deity is worshipped as <span class="highlight">Senthilandavan</span> (the red-hued lord of the sacred land).</p>
-            <p>Major festivals celebrated at the temple include:</p>
-            <ul>
-                <li><span class="highlight">Kanda Shashti</span> (Oct/Nov) - 6-day festival commemorating the victory over evil</li>
-                <li><span class="highlight">Thai Poosam</span> (Jan/Feb) - Celebrated with processions and abhishekams</li>
-                <li><span class="highlight">Panguni Uthiram</span> (Mar/Apr) - Wedding festival of Lord Murugan</li>
-                <li><span class="highlight">Aavani Festival</span> (Aug/Sep) - Annual Brahmotsavam</li>
-            </ul>
+                
+                <p>The <span class="highlight">Tiruchendur Murugan Temple</span> is one of the six sacred abodes of Lord Murugan (Arupadaiveedu). This ancient temple is located in the town of Tiruchendur in Tamil Nadu, India, on the shores of the Bay of Bengal.</p>
+                
+                <p>The temple's history dates back over <span class="highlight">2000 years</span>, with references found in ancient Tamil literature. According to legend, Lord Murugan came to Tiruchendur to wage war against the demon Surapadman. After a fierce battle that lasted several days, Murugan emerged victorious on the sixth day of the Tamil month of Aippasi, which is celebrated as <span class="highlight">Kanda Shashti</span>.</p>
+                
+                <p>The temple complex covers <span class="highlight">15 acres</span> and features a majestic <span class="highlight">157-foot tall gopuram</span> (tower) that was completed in the 17th century. The temple has undergone several renovations over the centuries, with significant contributions from various dynasties including the Pandyas, Cheras, and Cholas.</p>
+                
+                <p>What makes Tiruchendur unique is its location - the temple is built right on the <span class="highlight">seashore</span>, allowing devotees to perform rituals in the sea. The main deity is worshipped as <span class="highlight">Senthilandavan</span> (the red-hued lord of the sacred land).</p>
+                
+                <p>Major festivals celebrated at the temple include:</p>
+                <ul>
+                    <li><span class="highlight">Kanda Shashti</span> (Oct/Nov) - 6-day festival commemorating the victory over evil</li>
+                    <li><span class="highlight">Thai Poosam</span> (Jan/Feb) - Celebrated with processions and abhishekams</li>
+                    <li><span class="highlight">Panguni Uthiram</span> (Mar/Apr) - Wedding festival of Lord Murugan</li>
+                    <li><span class="highlight">Aavani Festival</span> (Aug/Sep) - Annual Brahmotsavam</li>
+                </ul>
         </div>
         
+        <!-- Give the prompt an ID so we can add an event listener -->
         <div id="open-chat-prompt" class="chatbot-prompt">
             * For Queries Use ChatBot
         </div>
@@ -265,12 +272,11 @@
     <script>
         // --- DATA FROM FLASK ---
         const USER_ID = '{{ user_id | tojson | safe }}';
-        const GOOGLE_MAPS_API_KEY = '{{ GOOGLE_MAPS_API_KEY | tojson | safe }}';
         
         // --- DOM ELEMENT REFERENCES ---
         const contentViewer = document.getElementById('content-viewer');
         const chatOpener = document.getElementById('chat-opener');
-        const openChatPrompt = document.getElementById('open-chat-prompt');
+        const openChatPrompt = document.getElementById('open-chat-prompt'); // New element
         const chatWindow = document.getElementById('chat-window');
         const chatCloser = document.getElementById('chat-closer');
         const chatBox = document.getElementById('chat-box');
@@ -279,10 +285,16 @@
         const sendButton = document.getElementById('send-button');
         const typingIndicator = document.getElementById('typing-indicator');
 
-        // --- INITIALIZATION & EVENT LISTENERS ---
-        document.addEventListener('DOMContentLoaded', () => sendMessageToServer(""));
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Send an empty string as the initial "question" to trigger the
+            // new user flow in the backend and get the welcome message.
+            sendMessageToServer(""); 
+        });
+
+        // --- EVENT LISTENERS ---
         chatOpener.addEventListener('click', () => toggleChatWindow(true));
-        openChatPrompt.addEventListener('click', () => toggleChatWindow(true));
+        openChatPrompt.addEventListener('click', () => toggleChatWindow(true)); // New listener
         chatCloser.addEventListener('click', () => toggleChatWindow(false));
         messageForm.addEventListener('submit', handleFormSubmit);
         chatBox.addEventListener('click', handleChatBoxClick);
@@ -290,7 +302,9 @@
         // --- CORE FUNCTIONS ---
         function toggleChatWindow(show) {
             chatWindow.classList.toggle('visible', show);
-            if (show) userInput.focus();
+            if (show) {
+                userInput.focus();
+            }
         }
 
         function handleFormSubmit(event) {
@@ -302,83 +316,36 @@
             sendMessageToServer(question);
         }
         
-        function getUserLocation() {
-            return new Promise((resolve, reject) => {
-                if (!navigator.geolocation) {
-                    return reject('Geolocation is not supported by your browser.');
-                }
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        // We also check the accuracy provided by the browser
-                        if (position.coords.accuracy > 1000) { // Accuracy is worse than 1km
-                            return reject('Inaccurate location detected.');
-                        }
-                        const { latitude, longitude } = position.coords;
-                        resolve(`${latitude},${longitude}`);
-                    },
-                    (error) => {
-                        // Handle all possible errors (permission denied, timeout, etc.)
-                        reject(`Geolocation error: ${error.message}`);
-                    },
-                    {
-                        enableHighAccuracy: true,
-                        timeout: 15000, // Increased timeout to 15 seconds
-                        maximumAge: 0
-                    }
-                );
-            });
-        }
-
-        async function handleChatBoxClick(event) {
+        function handleChatBoxClick(event) {
             const target = event.target;
-
-            // --- 1. HANDLE SPECIAL DIRECTIONS LINK ---
-            const directionsLink = target.closest('a.directions-link');
-            if (directionsLink) {
-                event.preventDefault();
-                const destination = directionsLink.dataset.destination;
-                if (!destination) return;
-
-                addMessage("Getting your location... This may take a moment.", 'bot');
-                toggleChatWindow(false);
-
-                try {
-                    const userLocation = await getUserLocation();
-                    console.log("Successfully got user location:", userLocation);
-                    // Build the directions URL
-                    const directionsUrl = `https://www.google.com/maps/embed/v1/directions?key=${GOOGLE_MAPS_API_KEY}&origin=${userLocation}&destination=${destination}`;
-                    loadMapInIframe(directionsUrl);
-
-                } catch (error) {
-                    console.warn("Could not get accurate user location:", error);
-                    addMessage('Could not get an accurate location. Showing the destination on the map instead.', 'bot');
-                    // Build the fallback place URL
-                    const placeUrl = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=${destination}`;
-                    loadMapInIframe(placeUrl);
-                }
-                return;
-            }
             
-            // --- 2. HANDLE SIMPLE EMBEDDED MAPS (like for "Search Nearby") ---
             const embedLink = target.closest('a[data-embed="true"]');
             if (embedLink) {
-                event.preventDefault();
+                event.preventDefault(); 
                 loadMapInIframe(embedLink.href);
-                toggleChatWindow(false);
                 return;
             }
 
-            // --- 3. HANDLE CHOICE BUTTONS ---
+            // This handles regular links that should open in a new tab
+            const regularLink = target.closest('a:not([data-embed="true"])');
+            if (regularLink) {
+                // Let the browser handle its default behavior (e.g., open in new tab for target="_blank")
+                return;
+            }
+
             const chatButton = target.closest('.chat-button');
-            if (chatButton && !chatButton.disabled) {
+            if (chatButton) {
                 event.preventDefault();
                 const payload = chatButton.dataset.payload;
                 const buttonText = chatButton.textContent.trim();
+                
                 addMessage(buttonText, 'user');
+                
                 const buttonContainer = chatButton.closest('.button-container');
                 if (buttonContainer) {
                     buttonContainer.querySelectorAll('.chat-button').forEach(btn => btn.disabled = true);
                 }
+                
                 sendMessageToServer(payload);
             }
         }
@@ -392,16 +359,17 @@
             iframe.setAttribute('loading', 'lazy');
             iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
             contentViewer.appendChild(iframe);
-            // Scroll the main page to the map viewer for better visibility
-            contentViewer.scrollIntoView({ behavior: 'smooth' });
+            toggleChatWindow(false);
         }
-        
+
         async function sendMessageToServer(message) {
             const isInitialMessage = message === "";
+
             toggleInput(false);
             if (!isInitialMessage) {
                 showTypingIndicator(true);
             }
+
             try {
                 const response = await fetch('/ask', {
                     method: 'POST',
@@ -409,11 +377,14 @@
                     body: JSON.stringify({ question: message, user_id: USER_ID })
                 });
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                
                 const data = await response.json();
+                
                 if (!isInitialMessage) {
                     showTypingIndicator(false);
                 }
                 addMessage(data.text, 'bot', data.buttons);
+
             } catch (error) {
                 console.error('Error fetching bot response:', error);
                 if (!isInitialMessage) showTypingIndicator(false);
@@ -425,14 +396,19 @@
         
         function addMessage(text, sender, buttons = []) {
             if (!text) return;
+
             const shouldScroll = isScrolledToBottom();
+
             const messageElement = document.createElement('div');
             messageElement.classList.add('message', `${sender}-message`);
+
             const bubbleElement = document.createElement('div');
             bubbleElement.classList.add('bubble');
+            
             const textElement = document.createElement('div');
             textElement.innerHTML = text; 
             bubbleElement.appendChild(textElement);
+            
             if (buttons && buttons.length > 0) {
                 const buttonContainer = document.createElement('div');
                 buttonContainer.className = 'button-container';
@@ -445,8 +421,10 @@
                 });
                 bubbleElement.appendChild(buttonContainer);
             }
+
             messageElement.appendChild(bubbleElement);
             chatBox.insertBefore(messageElement, typingIndicator);
+            
             if (shouldScroll) {
                 scrollToBottom();
             }

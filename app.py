@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Now import the bot logic which depends on the loaded variables
-# Replace with this
-from bot_logic import BotLogic, logger, GOOGLE_MAPS_API_KEY
+from bot_logic import BotLogic, logger
+
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
@@ -17,13 +17,13 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY")
 bot_logic = BotLogic()
 logger.info("BotLogic initialized for the web application.")
 
-# Replace the function with this
 @app.route('/')
 def index():
     """Renders the main page. A unique user_id is generated for the session."""
+    # We just need to provide a unique ID for the user's session.
+    # The initial bot message will be fetched by the JavaScript after the page loads.
     user_id = str(uuid.uuid4())
-    # Pass the API key to the template so JavaScript can use it
-    return render_template('index.html', user_id=user_id, GOOGLE_MAPS_API_KEY=GOOGLE_MAPS_API_KEY)
+    return render_template('index.html', user_id=user_id)
 
 @app.route('/ask', methods=['POST'])
 def ask():
