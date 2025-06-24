@@ -276,7 +276,7 @@
         // --- DOM ELEMENT REFERENCES ---
         const contentViewer = document.getElementById('content-viewer');
         const chatOpener = document.getElementById('chat-opener');
-        const openChatPrompt = document.getElementById('open-chat-prompt'); // New element
+        const openChatPrompt = document.getElementById('open-chat-prompt');
         const chatWindow = document.getElementById('chat-window');
         const chatCloser = document.getElementById('chat-closer');
         const chatBox = document.getElementById('chat-box');
@@ -287,14 +287,12 @@
 
         // --- INITIALIZATION ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Send an empty string as the initial "question" to trigger the
-            // new user flow in the backend and get the welcome message.
             sendMessageToServer(""); 
         });
 
         // --- EVENT LISTENERS ---
         chatOpener.addEventListener('click', () => toggleChatWindow(true));
-        openChatPrompt.addEventListener('click', () => toggleChatWindow(true)); // New listener
+        openChatPrompt.addEventListener('click', () => toggleChatWindow(true));
         chatCloser.addEventListener('click', () => toggleChatWindow(false));
         messageForm.addEventListener('submit', handleFormSubmit);
         chatBox.addEventListener('click', handleChatBoxClick);
@@ -316,23 +314,68 @@
             sendMessageToServer(question);
         }
         
-        function handleChatBoxClick(event) {
+        /**
+         * New helper function to get user's GPS location.
+         * Returns a Promise that resolves with a coordinate string "lat,lon".
+         */
+        function getUserLocation() {
+            return new Promise((resolve, reject) => {
+                if (!navigator.geolocation) {
+                    reject('Geolocation is not supported by your browser.');
+                    return;
+                }
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const { latitude, longitude } = position.coords;
+                        resolve(`${latitude},${longitude}`);
+                    },
+                    (error) => {
+                        reject(`Geolocation error: ${error.message}`);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 0
+                    }
+                );
+            });
+        }
+        
+        // --- THIS IS THE NEW, UPDATED FUNCTION ---
+        async function handleChatBoxClick(event) {
             const target = event.target;
             
+            // 1. Handle special map links
             const embedLink = target.closest('a[data-embed="true"]');
             if (embedLink) {
                 event.preventDefault(); 
-                loadMapInIframe(embedLink.href);
+                let finalUrl = embedLink.href;
+
+                // Check if this link needs the user's current location
+                if (finalUrl.includes('origin=CURRENT_LOCATION')) {
+                    addMessage("Getting your location to calculate the route...", 'bot');
+                    try {
+                        const userLocation = await getUserLocation();
+                        console.log("Successfully got user location:", userLocation);
+                        finalUrl = finalUrl.replace('CURRENT_LOCATION', userLocation);
+                    } catch (error) {
+                        console.warn("Could not get user location:", error);
+                        addMessage('Could not get your location. Showing directions from the temple area.', 'bot');
+                        // Fallback to Tiruchendur's coordinates if location access fails
+                        finalUrl = finalUrl.replace('CURRENT_LOCATION', '8.4967,78.1245');
+                    }
+                }
+                loadMapInIframe(finalUrl);
                 return;
             }
 
-            // This handles regular links that should open in a new tab
+            // 2. Handle regular links that should open in a new tab
             const regularLink = target.closest('a:not([data-embed="true"])');
             if (regularLink) {
-                // Let the browser handle its default behavior (e.g., open in new tab for target="_blank")
-                return;
+                return; // Let the browser handle its default behavior
             }
 
+            // 3. Handle choice buttons
             const chatButton = target.closest('.chat-button');
             if (chatButton) {
                 event.preventDefault();
@@ -360,16 +403,16 @@
             iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
             contentViewer.appendChild(iframe);
             toggleChatWindow(false);
+            // Scroll the main page to the map viewer for better visibility
+            contentViewer.scrollIntoView({ behavior: 'smooth' });
         }
 
         async function sendMessageToServer(message) {
             const isInitialMessage = message === "";
-
             toggleInput(false);
             if (!isInitialMessage) {
                 showTypingIndicator(true);
             }
-
             try {
                 const response = await fetch('/ask', {
                     method: 'POST',
@@ -396,19 +439,14 @@
         
         function addMessage(text, sender, buttons = []) {
             if (!text) return;
-
             const shouldScroll = isScrolledToBottom();
-
             const messageElement = document.createElement('div');
             messageElement.classList.add('message', `${sender}-message`);
-
             const bubbleElement = document.createElement('div');
             bubbleElement.classList.add('bubble');
-            
             const textElement = document.createElement('div');
             textElement.innerHTML = text; 
             bubbleElement.appendChild(textElement);
-            
             if (buttons && buttons.length > 0) {
                 const buttonContainer = document.createElement('div');
                 buttonContainer.className = 'button-container';
@@ -421,10 +459,8 @@
                 });
                 bubbleElement.appendChild(buttonContainer);
             }
-
             messageElement.appendChild(bubbleElement);
             chatBox.insertBefore(messageElement, typingIndicator);
-            
             if (shouldScroll) {
                 scrollToBottom();
             }

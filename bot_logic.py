@@ -461,9 +461,10 @@ class BotLogic:
             for key_en in list(item.keys()):
                 if key_en.endswith('_en'):
                     format_kwargs[key_en[:-3].capitalize()] = item.get(f"{key_en[:-3]}_{lang}", item.get(key_en, 'N/A'))
-
-            embed_url = self._generate_embed_link(f"{item_name}, Tiruchendur")
-            link_html = f'<a href="{embed_url}" data-embed="true">{link_text}</a>' if embed_url else "Map not available"
+            
+            destination_query = f"{item.get('Latitude', '')},{item.get('Longitude', '')}" if item.get('Latitude') else f"{item_name}, Tiruchendur"
+            embed_url = self._generate_embed_link(mode="directions", origin="CURRENT_LOCATION", destination=destination_query)
+            link_html = f'<a href="{embed_url}" data-embed="true">Get Directions</a>' if embed_url else "Map not available"
             format_kwargs["LocationLink"] = link_html
             format_kwargs["MapsLink"] = link_html
             reply_parts.append(item_template.format_map(format_kwargs))
@@ -533,7 +534,7 @@ class BotLogic:
 
         details_list = []
         for lot in sorted_lots:
-            embed_url = self._generate_embed_link(mode="directions", origin=f"{user_lat},{user_lon}", destination=f"{lot['Latitude']},{lot['Longitude']}")
+            embed_url = self._generate_embed_link(mode="directions", origin="CURRENT_LOCATION", destination=f"{lot['Latitude']},{lot['Longitude']}")
             maps_link = f'<a href="{embed_url}" data-embed="true">Get Directions</a>' if embed_url else "Directions unavailable"
 
             details_list.append(self.get_text(user_id, "parking_lot_details_format",
