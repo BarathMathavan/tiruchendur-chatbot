@@ -20,8 +20,6 @@ logger.info("BotLogic initialized for the web application.")
 @app.route('/')
 def index():
     """Renders the main page. A unique user_id is generated for the session."""
-    # We just need to provide a unique ID for the user's session.
-    # The initial bot message will be fetched by the JavaScript after the page loads.
     user_id = str(uuid.uuid4())
     return render_template('index.html', user_id=user_id)
 
