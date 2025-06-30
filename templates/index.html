@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiruchendur Assistant</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T47KR7SMH6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T47KR7SMH6');
+    </script>
     <style>
         /* All the beautiful new CSS is kept */
         * {
@@ -293,8 +302,18 @@
         });
 
         // --- EVENT LISTENERS ---
-        chatOpener.addEventListener('click', () => toggleChatWindow(true));
-        openChatPrompt.addEventListener('click', () => toggleChatWindow(true)); // New listener
+        chatOpener.addEventListener('click', () => {
+            toggleChatWindow(true);
+            if (typeof gtag === 'function') {
+                gtag('event', 'chat_opened', { 'event_category': 'Engagement' });
+            }
+        });
+        openChatPrompt.addEventListener('click', () => {
+            toggleChatWindow(true);
+            if (typeof gtag === 'function') {
+                gtag('event', 'chat_opened', { 'event_category': 'Engagement' });
+            }
+        });
         chatCloser.addEventListener('click', () => toggleChatWindow(false));
         messageForm.addEventListener('submit', handleFormSubmit);
         chatBox.addEventListener('click', handleChatBoxClick);
@@ -311,6 +330,12 @@
             event.preventDefault();
             const question = userInput.value.trim();
             if (!question) return;
+            if (typeof gtag === 'function') {
+                gtag('event', 'typed_query', {
+                    'event_category': 'Chat Interaction',
+                    'event_label': question.substring(0, 100) // Limit to 100 chars
+                });
+            }
             addMessage(question, 'user');
             userInput.value = '';
             sendMessageToServer(question);
@@ -321,7 +346,15 @@
             
             const embedLink = target.closest('a[data-embed="true"]');
             if (embedLink) {
-                event.preventDefault(); 
+                event.preventDefault();
+    
+                if (typeof gtag === 'function') {
+                    gtag('event', 'map_link_clicked', {
+                        'event_category': 'Map Interaction',
+                        'event_label': embedLink.href
+                    });
+                }
+    
                 loadMapInIframe(embedLink.href);
                 return;
             }
@@ -338,6 +371,13 @@
                 event.preventDefault();
                 const payload = chatButton.dataset.payload;
                 const buttonText = chatButton.textContent.trim();
+                if (typeof gtag === 'function') {
+                    gtag('event', 'button_click', {
+                        'event_category': 'Chat Interaction',
+                        'event_label': buttonText,
+                        'payload': payload
+                    });
+                }
                 
                 addMessage(buttonText, 'user');
                 

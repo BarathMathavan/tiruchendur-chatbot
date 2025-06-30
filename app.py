@@ -13,7 +13,7 @@ from bot_logic import BotLogic, logger
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
-# Initialize the bot logic once when the application starts
+# Initialize the bot logic once when the application starts      
 bot_logic = BotLogic()
 logger.info("BotLogic initialized for the web application.")
 
